@@ -13,7 +13,7 @@ Develop your code
 - clone primo_ve (this repo)
 - work, add, commit, push, merge
 - repeat until finished
-- ask for the secrets file ```secrets,json``` and place it in the ```primo_ve``` directory
+- ask for the secrets file ```secrets.json``` and place it in the ```primo_ve``` directory
     - add any new secrets: ```secret_name``` and ```secret_value```
     - append a random string to the ```secret_name``` for uniqueness
 
@@ -35,26 +35,28 @@ Structure of a typical ```secrets.json``` file
 ```
 
 Deploy to Test:
+
     - locally, rename the top level folder from ```01UCS_LAL-UCLA``` to ```01UCS_LAL-Test_00```
     - run the ```primo-zip.py``` script on the command line
     ```>python3 primo-zip.py```
-    - note: ```01UCS_LAL-Test_00.zip``` created (or updated) with secrets in place; secrets are then erased from the source code
+    - note: ```01UCS_LAL-Test_00.zip``` is created (or updated) with secrets in place; secrets are then erased from the source code (from which the zip file was created)
     - upload to the *Test_00* view using the Primo gui: https://ucla.alma.exlibrisgroup.com/SAML
     - delete the folder and zip file before continuing editing or using git
-    - delete the secrets file before using git
+    - delete the secrets.json file before using git
       - this is a good precaution even though ```*secrets*``` is in the ```.gitignore``` file
     - repeat the copy and zip before each deploy to the Test system
     - reset to Production by renaming the top level folder from ```01UCS_LAL-Test_00``` to ```01UCS_LAL-UCLA```
 
 Deploy to Production
+
     - ensure that the top level folder is named 01UCS_LAL-UCLA
     - delete any Test folders or zip files: ```01UCS_LAL-Test_00``` and/or ```01UCS_LAL-Test_00.zip```
     - run the ```primo-zip.py``` script on the command line
     ```>python3 primo-zip.py```
-    - note: ```01UCS_LAL-UCLA.zip``` created (or updated) with secrets in place; secrets are then erased from the source code
+    - note: ```01UCS_LAL-UCLA.zip``` created (or updated) with secrets in place; secrets are then erased from the source code (from which the zip file was created)
     - upload to the *UCLA* view using the Primo gui: https://ucla.alma.exlibrisgroup.com/SAML
     - delete the folder and zip file before continuing editing or using git
-    - delete the secrets file before using git
+    - delete the secrets.json file before using git
       - this is a good precaution even though ```*secrets*``` is in the ```.gitignore``` file
     - repeat zip before each deploy to the Test system
 
