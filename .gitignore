@@ -1,0 +1,5 @@
+*.zip
+
+# Local app-specific secrets
+*secret*
+*password*
