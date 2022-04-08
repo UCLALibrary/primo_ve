@@ -28,8 +28,10 @@ def swap_secrets_and_values(secret_data, types_to_check, directory, secret_visib
                     secret_swap = [secret_name, secret_value]
                     with fileinput.FileInput(filepath, inplace=True) as file:
                         for line in file:
+                            # Replaces secret_name with secret_value when secret_visible = 1;
+                            #  replaces secret_value with secret_name when secret_visible = 0
                             print(line.replace(
-                                str(secret_swap[abs(1-secret_visible)]), secret_swap[secret_visible]), end='')
+                                str(secret_swap[1-secret_visible]), secret_swap[secret_visible]), end='')
                     cnt += 1
 
 
