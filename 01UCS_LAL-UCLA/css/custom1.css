@@ -365,3 +365,34 @@ prm-stand-alone-login .md-button:hover:not([disabled]) {
 prm-stand-alone-login prm-login form > div .md-button:hover:not([disabled]) md-icon.md-primoExplore-theme {
   color: var(--color-secondary-blue-03) !important;
 }
+
+/* Prevent advanced search box from collapsing after search */
+
+#advancedSearchTabs {
+    min-height: 700px;
+    overflow: auto;
+}
+
+@media (min-width: 600px) {
+    #advancedSearchTabs {
+        min-height: 400px;
+    }
+}
+
+.string-block .animate-scale .middle {
+    display: none;
+}
+
+.collapsed-area .layout-wrap .layout-align-space-between-center .layout-row {
+    display: none;
+}
+
+/* Fix ExLibris-inspired disappearing advanced search field issue */
+prm-search-bar .advanced-search-wrapper md-input-container.bold-text input.ng-hide:not(.ng-hide-animate) {
+  display: block !important;
+}
+
+/* what does this do really? */
+prm-advanced-search * > button.collapsed-button * > md-icon {
+  display: none;
+}
