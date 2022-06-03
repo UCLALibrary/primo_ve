@@ -392,7 +392,7 @@ prm-search-bar .advanced-search-wrapper md-input-container.bold-text input.ng-hi
   display: block !important;
 }
 
-/* what does this do really? */
+/* Remove currently non-functional "collapse" chevron from adv search */
 prm-advanced-search * > button.collapsed-button * > md-icon {
   display: none;
 }
