@@ -6,7 +6,7 @@ import os
 import sys
 
 
-def swap_secrets_and_values(secret_data, types_to_check, directory, secret_visible=True):
+def swap_secrets_and_values(secret_data, types_to_check, directory, secret_visible):
 
     # var for file paths list
     file_paths = []
@@ -19,12 +19,9 @@ def swap_secrets_and_values(secret_data, types_to_check, directory, secret_visib
                 file_paths.append(filepath)
 
                 # find and replace each secret tag with the actual secret
-                cnt = 0
-                for i in secret_data['secret_details']:
-                    secret_name = str(
-                        secret_data['secret_details'][cnt]['secret_name'])
-                    secret_value = str(
-                        secret_data['secret_details'][cnt]['secret_value'])
+                for secret in secret_data['secret_details']:
+                    secret_name = secret['secret_name']
+                    secret_value = secret['secret_value']
 
                     with fileinput.FileInput(filepath, inplace=True) as file:
                         for line in file:
@@ -34,7 +31,6 @@ def swap_secrets_and_values(secret_data, types_to_check, directory, secret_visib
                                 print(line.replace(secret_name, secret_value), end='')
                             else:
                                 print(line.replace(secret_value, secret_name), end='')
-                    cnt += 1
 
 
 def zip_up_source(zip_name, base_directory, directory):
@@ -53,6 +49,8 @@ def main():
     types_to_check = ('.js', '.css', 'html', 'md', 'txt')
     base_directory = '.'
     directory = './' + zip_name
+    if not os.path.isdir(directory):
+        sys.exit("Folder name parameter must match top-level directory name.")
 
     # source of the secrets
     secrets = open('secrets.json')
@@ -61,14 +59,14 @@ def main():
 
     # find each file in dir structure, replace tags with secrets
     swap_secrets_and_values(secret_data, types_to_check,
-                            directory, secret_visible=True)
+                            directory, True)
 
     # zip the source for deploymeny to Primo
     zip_up_source(zip_name, base_directory, directory)
 
     # find each file in dir structure, replace secrets with tags
     swap_secrets_and_values(secret_data, types_to_check,
-                            directory, secret_visible=False)
+                            directory, False)
 
     print('Secrets inserted and files zipped: ' + zip_name + '.zip')
     print('Secrets cleared: code may now be pushed')
