@@ -5,7 +5,6 @@ This repo may be deployed to Primo VE at https://ucla.alma.exlibrisgroup.com/SAM
 A *premium sandbox* (PSB), copied from production, is at https://sandbox02-na.alma.exlibrisgroup.com/institution/01UCS_LAL).
 
 Note: Deployment to either target is a manual process - this repo is used for source control.
-        This repo is defaulted for deployment to Production. Make the changes noted below for deployment to Test.
 
 **Workflow**
 
@@ -36,28 +35,29 @@ Structure of a typical ```secrets.json``` file
 
 Deploy to Test:
 
-    - locally, rename the top level folder from ```01UCS_LAL-UCLA``` to ```01UCS_LAL-Test_00```
-    - run the ```primo-zip.py``` script on the command line
-    ```>python3 primo-zip.py```
-    - note: ```01UCS_LAL-Test_00.zip``` is created (or updated) with secrets in place; secrets are then erased from the source code (from which the zip file was created)
-    - upload to the *Test_00* view using the Primo gui: https://ucla.alma.exlibrisgroup.com/SAML
+    - locally, rename the top level folder from ```01UCS_LAL-UCLA``` to the name of the test view you will use
+    - run the ```primo-zip.py``` script on the command line, using the desired view's name as a parameter, e.g.
+    ```>python3 primo-zip.py 01UCS_LAL-TEST_DEV```
+        - note: the view name specified here must match the name of the top-level folder
+    - note: ```01UCS_LAL-TEST_DEV``` is created (or updated) with secrets in place; secrets are then erased from the source code (from which the zip file was created)
+    - upload to the desired test view using the Primo gui: https://ucla.alma.exlibrisgroup.com/SAML
     - delete the folder and zip file before continuing editing or using git
     - delete the secrets.json file before using git
       - this is a good precaution even though ```*secrets*``` is in the ```.gitignore``` file
     - repeat the copy and zip before each deploy to the Test system
-    - reset to Production by renaming the top level folder from ```01UCS_LAL-Test_00``` to ```01UCS_LAL-UCLA```
+    - reset to Production by renaming the top level folder to ```01UCS_LAL-UCLA```
 
 Deploy to Production
 
     - ensure that the top level folder is named 01UCS_LAL-UCLA
-    - delete any Test folders or zip files: ```01UCS_LAL-Test_00``` and/or ```01UCS_LAL-Test_00.zip```
-    - run the ```primo-zip.py``` script on the command line
-    ```>python3 primo-zip.py```
-    - note: ```01UCS_LAL-UCLA.zip``` created (or updated) with secrets in place; secrets are then erased from the source code (from which the zip file was created)
-    - upload to the *UCLA* view using the Primo gui: https://ucla.alma.exlibrisgroup.com/SAML
+    - delete any Test folders or zip files
+    - run the ```primo-zip.py``` script on the command line, using the production's view name as a parameter
+    ```>python3 primo-zip.py 01UCS_LAL-UCLA```
+    - note: ```01UCS_LAL-UCLA.zip``` is created (or updated) with secrets in place; secrets are then erased from the source code (from which the zip file was created)
+    - upload to the production view using the Primo gui: https://ucla.alma.exlibrisgroup.com/SAML
     - delete the folder and zip file before continuing editing or using git
     - delete the secrets.json file before using git
       - this is a good precaution even though ```*secrets*``` is in the ```.gitignore``` file
     - repeat zip before each deploy to the Test system
 
-Note: Any Alma Primo VE gui settings that are changed in the *Test_00* GUI view must be transferred by hand to the *UCLA* GUI view.
+Note: Any Alma Primo VE gui settings that are changed in the test view's GUI must be transferred by hand to the *UCLA* view GUI.
