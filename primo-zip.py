@@ -59,14 +59,14 @@ def main():
 
     # find each file in dir structure, replace tags with secrets
     swap_secrets_and_values(secret_data, types_to_check,
-                            directory, True)
+                            directory, secret_visible=True)
 
     # zip the source for deploymeny to Primo
     zip_up_source(zip_name, base_directory, directory)
 
     # find each file in dir structure, replace secrets with tags
     swap_secrets_and_values(secret_data, types_to_check,
-                            directory, False)
+                            directory, secret_visible=False)
 
     print('Secrets inserted and files zipped: ' + zip_name + '.zip')
     print('Secrets cleared: code may now be pushed')
