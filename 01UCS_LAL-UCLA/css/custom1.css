@@ -288,7 +288,7 @@ md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button:focus:
 .login-dialog md-list md-list-item > .md-no-style .md-list-item-text .list-item-title,
 .login-dialog md-list md-list-item > .md-no-style .md-list-item-text h3,
 .light-on-dark-dialog .md-button.button-confirm {
-  color: var(--color-white) !important;
+  color: var(--color-secondary-yellow-600) !important;
 }
 
 md-dialog-content md-input-container:after {
@@ -375,4 +375,9 @@ prm-full-view .services-index-under #services-index{
 }
 .full-view-section {
   padding-left: 4em;
+}
+
+/* remove icons from My Library Card */
+prm-icon.giant-icon md-icon {
+  display: none
 }
