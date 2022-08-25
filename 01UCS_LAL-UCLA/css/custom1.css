@@ -377,7 +377,11 @@ prm-full-view .services-index-under #services-index{
   padding-left: 4em;
 }
 
-/* remove icons from My Library Card */
+/* remove icons and animations from My Library Card */
 prm-icon.giant-icon md-icon {
   display: none
+}
+
+md-tab-content {
+  transition: unset
 }
