@@ -387,3 +387,10 @@ md-tab-content {
 md-ink-bar {
   transition: unset !important
 }
+
+/* fix overlapping text in main search bar */
+md-autocomplete-parent-scope {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
