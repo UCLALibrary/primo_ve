@@ -376,6 +376,18 @@ prm-full-view .services-index-under #services-index{
 .full-view-section {
   padding-left: 4em;
 }
+
+/* remove icons and animations from My Library Card */
+prm-icon.giant-icon md-icon {
+  display: none
+}
+md-tab-content {
+  transition: unset !important
+}
+md-ink-bar {
+  transition: unset !important
+}
+
 /* fix overlapping text in main search bar */
 md-autocomplete-parent-scope {
   overflow: hidden;
