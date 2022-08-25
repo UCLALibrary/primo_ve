@@ -381,7 +381,9 @@ prm-full-view .services-index-under #services-index{
 prm-icon.giant-icon md-icon {
   display: none
 }
-
 md-tab-content {
-  transition: unset
+  transition: unset !important
+}
+md-ink-bar {
+  transition: unset !important
 }
