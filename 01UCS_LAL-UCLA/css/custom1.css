@@ -376,3 +376,9 @@ prm-full-view .services-index-under #services-index{
 .full-view-section {
   padding-left: 4em;
 }
+/* fix overlapping text in main search bar */
+md-autocomplete-parent-scope {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
