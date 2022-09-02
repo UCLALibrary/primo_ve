@@ -394,3 +394,20 @@ md-autocomplete-parent-scope {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* increase width of item request form */
+.layout-align-start-stretch, #form_field_pickupLocation .underlined-input, 
+#form_field_termsOfUse .underlined-input, #form_field_comment .underlined-input, 
+md-input-container .md-input, .md-datepicker-input {
+  width: 100%;
+} 
+.md-datepicker-input {
+  max-width: 500px
+}
+.md-datepicker-input-container {
+  width: 100%;
+  margin-left: -34px !important;
+}
+._md-datepicker-floating-label._md-datepicker-has-calendar-icon md-datepicker .md-datepicker-button {
+  left: -34px 
+}
