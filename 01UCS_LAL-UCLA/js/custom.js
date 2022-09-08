@@ -247,84 +247,87 @@
   app.component('prmFacetExactAfter', {
     bindings: { parentCtrl: '<' },
     template: '<external-search></external-search>',
-    controller: ['$scope', '$location', 'searchTargets', function ($scope, $location, searchTargets) {
-      $scope.name = this.parentCtrl.facetGroup.name;
-      $scope.targets = searchTargets;
-      var query = $location.search().query;
-      var filter = $location.search().pfilter;
-      $scope.queries = Array.isArray(query) ? query : query ? [query] : false;
-      $scope.filters = Array.isArray(filter) ? filter : filter ? [filter] : false;
+    controller: ['$scope', '$location', 'searchTargets', function($scope, $location, searchTargets) {
+      this.$onInit = function(){
+        {
+          $scope.name = this.parentCtrl.facetGroup.name;
+          $scope.targets = searchTargets;
+          var query = $location.search().query;
+          var filter = $location.search().pfilter;
+          $scope.queries = Array.isArray(query) ? query : query ? [query] : false;
+          $scope.filters = Array.isArray(filter) ? filter : filter ? [filter] : false;
 
-      /*
-       * From https://github.com/alliance-pcsg/primo-explore-external-search
-       * Customized to replace "University of California" with "UC" in facets and to alphabetize the list.
-       */
-      if ($scope.name == 'institution') {
-           // Once the institutions facets load, find them in the document.
-           var institutionFacets = document.querySelector('[data-facet-group="institution"]');
-           // Facets are created and destroyed in the DOM when the group is toggled so watch for clicks
-           institutionFacets.addEventListener('click', function () {
-                // There is a slight delay as Alma loads the facets, so check on a tight interval
-                var i = 0;
-                var institutionsInterval = window.setInterval(function () {
-                     var institutions = institutionFacets.getElementsByClassName('text-number-space');
-                     // When found, cycle through the institutions and replace the text as appropriate
-                     if (institutions.length > 0) {
-                          var _iteratorNormalCompletion = true;
-                          var _didIteratorError = false;
-                          var _iteratorError = undefined;
+          /*
+           * From https://github.com/alliance-pcsg/primo-explore-external-search
+           * Customized to replace "University of California" with "UC" in facets and to alphabetize the list.
+           */
+          if ($scope.name == 'institution') {
+               // Once the institutions facets load, find them in the document.
+               var institutionFacets = document.querySelector('[data-facet-group="institution"]');
+               // Facets are created and destroyed in the DOM when the group is toggled so watch for clicks
+               institutionFacets.addEventListener('click', function () {
+                    // There is a slight delay as Alma loads the facets, so check on a tight interval
+                    var i = 0;
+                    var institutionsInterval = window.setInterval(function () {
+                         var institutions = institutionFacets.getElementsByClassName('text-number-space');
+                         // When found, cycle through the institutions and replace the text as appropriate
+                         if (institutions.length > 0) {
+                              var _iteratorNormalCompletion = true;
+                              var _didIteratorError = false;
+                              var _iteratorError = undefined;
 
-                          try {
-                               for (var _iterator = institutions[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                                    var oneInst = _step.value;
+                             try {
+                                for (var _iterator = institutions[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                                     var oneInst = _step.value;
+ 
+                                     oneInst.textContent = oneInst.textContent.replace(',', '');
+                                     oneInst.textContent = oneInst.textContent.replace('University of California', 'UC');
+                                     oneInst.title = oneInst.title.replace(',', '');
+                                     oneInst.title = oneInst.title.replace('University of California', 'UC');
+                                     clearInterval(institutionsInterval);
+                                }
+                                // Now alphabetize! First, get the better query for doing this.
+                           } catch (err) {
+                                _didIteratorError = true;
+                                _iteratorError = err;
+                           } finally {
+                                try {
+                                     if (!_iteratorNormalCompletion && _iterator.return) {
+                                          _iterator.return();
+                                     }
+                                } finally {
+                                     if (_didIteratorError) {
+                                          throw _iteratorError;
+                                     }
+                                }
+                           }
 
-                                    oneInst.textContent = oneInst.textContent.replace(',', '');
-                                    oneInst.textContent = oneInst.textContent.replace('University of California', 'UC');
-                                    oneInst.title = oneInst.title.replace(',', '');
-                                    oneInst.title = oneInst.title.replace('University of California', 'UC');
-                                    clearInterval(institutionsInterval);
-                               }
-                               // Now alphabetize! First, get the better query for doing this.
-                          } catch (err) {
-                               _didIteratorError = true;
-                               _iteratorError = err;
-                          } finally {
-                               try {
-                                    if (!_iteratorNormalCompletion && _iterator.return) {
-                                         _iterator.return();
-                                    }
-                               } finally {
-                                    if (_didIteratorError) {
-                                         throw _iteratorError;
-                                    }
-                               }
-                          }
-
-                          var elems = institutionFacets.getElementsByClassName('md-chip');
-                          console.log("Elems: ", elems);
-                          // turn into a sortable array
-                          elems = Array.prototype.slice.call(elems);
-                          // Sort it.
-                          elems.sort(function (a, b) {
-                               return a.textContent.localeCompare(b.textContent);
-                          });
-                          // Reattached the sorted elements
-                          for (var i = 0; i < elems.length; i++) {
-                               var parent = elems[i].parentNode;
-                               var detatchedItem = parent.removeChild(elems[i]);
-                               parent.appendChild(detatchedItem);
-                          }
-                     }
-                     // Only try 10 times before exiting.
-                     i > 10 ? clearInterval(institutionsInterval) : i++;
-                }, 100);
-           });
-      }
-      /*
-       * END - From https://github.com/alliance-pcsg/primo-explore-external-search
-       * END - Customized to replace "University of California" with "UC" in facets and to alphabetize the list.
-       */
-
+                              var elems = institutionFacets.getElementsByClassName('md-chip');
+                              console.log("Elems: ", elems);
+                              // turn into a sortable array
+                              elems = Array.prototype.slice.call(elems);
+                              // Sort it.
+                              elems.sort(function (a, b) {
+                                   return a.textContent.localeCompare(b.textContent);
+                              });
+                              // Reattached the sorted elements
+                              for (var i = 0; i < elems.length; i++) {
+                                   var parent = elems[i].parentNode;
+                                   var detatchedItem = parent.removeChild(elems[i]);
+                                   parent.appendChild(detatchedItem);
+                              }
+                         }
+                         // Only try 10 times before exiting.
+                         i > 10 ? clearInterval(institutionsInterval) : i++;
+                    }, 100);
+               });
+          }
+          /*
+           * END - From https://github.com/alliance-pcsg/primo-explore-external-search
+           * END - Customized to replace "University of California" with "UC" in facets and to alphabetize the list.
+           */
+        }
+      };
     }]
   });
 
