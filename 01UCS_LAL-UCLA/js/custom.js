@@ -164,10 +164,9 @@
         </a>\
     </span>'
   });
-  // HathiTrust Add-On - START
-  // HathiTrust Add-On - START
-  // HathiTrust Add-On - START
-
+  // HathiTrust Add-On - END
+  // HathiTrust Add-On - END
+  // HathiTrust Add-On - END
 
   // Google Tag Manager - START
   // Google Tag Manager - START
@@ -465,52 +464,54 @@
     templateUrl: uclaHostNameTemp
   });
 
-  app.controller('SearchBarAfterController', ['$scope', '$rootScope', '$location', '$window', function ($scope, $rootScope, $location, $window) {
+  app.controller('SearchBarAfterController', ['$scope', '$rootScope', '$location', '$window', function($scope, $rootScope, $location, $window) {
     var vm = this;
 
-    this.navigateToHomePage = function () {
-      var params = $location.search();
-      console.log(params);
-      var vid = params.vid;
-      var lang = params.lang || "en_US";
-      var split = $location.absUrl().split('/discovery/');
+    this.$onInit = function(){
+      {
+        this.navigateToHomePage = function () {
+          var params = $location.search();
+          console.log(params);
+          var vid = params.vid;
+          var lang = params.lang || "en_US";
+          var split = $location.absUrl().split('/discovery/');
 
-      if (split.length === 1) {
-        console.log(split[0] + ' : Could not detect the view name!');
-        return false;
+          if (split.length === 1) {
+            console.log(split[0] + ' : Could not detect the view name!');
+            return false;
+          }
+
+          if ($location.absUrl().match('mode=advanced')) {
+            console.log($location.absUrl().match('mode=advanced') + ' : Detected Advanced Search!');
+            return false;
+          }
+
+          var baseUrl = split[0];
+          $window.location.href = baseUrl + '/discovery/search?vid=' + vid + '&lang=' + lang;
+          return true;
+        };
+
+        this.showSearchLogo = function() {
+          var params = $location.search();
+          console.log(params);
+          var vid = params.vid;
+          var lang = params.lang || "en_US";
+          var split = $location.absUrl().split('/discovery/');
+
+          if (split.length === 1) {
+            console.log(split[0] + ' : Could not detect the view name!');
+            return false;
+          }
+
+          if ($location.absUrl().match('mode=advanced')) {
+            console.log($location.absUrl().match('mode=advanced') + ' : Detected Advanced Search!');
+            return false;
+          }
+
+          return true;
+        };
       }
-
-      if ($location.absUrl().match('mode=advanced')) {
-        console.log($location.absUrl().match('mode=advanced') + ' : Detected Advanced Search!');
-        return false;
-      }
-
-      var baseUrl = split[0];
-      $window.location.href = baseUrl + '/discovery/search?vid=' + vid + '&lang=' + lang;
-      return true;
     };
-
-    this.showSearchLogo = function() {
-      var params = $location.search();
-      console.log(params);
-      var vid = params.vid;
-      var lang = params.lang || "en_US";
-      var split = $location.absUrl().split('/discovery/');
-
-      if (split.length === 1) {
-        console.log(split[0] + ' : Could not detect the view name!');
-        return false;
-      }
-
-      if ($location.absUrl().match('mode=advanced')) {
-        console.log($location.absUrl().match('mode=advanced') + ' : Detected Advanced Search!');
-        return false;
-      }
-
-      return true;
-    };
-
-
   }]);
   // Search Logo - END
   // Search Logo - END
@@ -556,8 +557,12 @@
   browzine.script = document.createElement("script");
   browzine.script.src = "https://s3.amazonaws.com/browzine-adapters/primo/browzine-primo-adapter.js";
   document.head.appendChild(browzine.script);
-  app.controller('digitalBookTitleButtonController', ['$scope', '$location', '$mdDialog', '$anchorScroll', function($scope, $location, $mdDialog,$anchorScroll){
-    window.browzine.primo.searchResult($scope);
+  app.controller('digitalBookTitleButtonController', ['$scope', '$location', '$mdDialog', '$anchorScroll', function($scope, $location, $mdDialog, $anchorScroll) {
+    this.$onInit = function(){
+      {
+        window.browzine.primo.searchResult($scope);
+      }
+    };
   }]);
   // BrowZine - END
   // BrowZine - END
@@ -582,45 +587,48 @@
     template: '<md-content layout-xs="column" layout="row" class="layout-align-center-start"><div flex="60" flex-xs="100" layout="column"><md-card class="default-card"><md-card-content><p class="browseContentHeadline">Search here if you already know:</p><ul><li>Author</li><li>Title (or the first few words of a title)</li><li>Subject, Call number, or Series</li></ul></md-card-content></md-card></div></md-content>'
   });
 
-
-  // LibChat - START
+ // LibChat - START
   // LibChat - START
   // LibChat - START
   /*----------below is the code for libchat-----------*/
   app.controller('chatController', ['$scope','$http', '$mdDialog', function($scope, $http, $mdDialog) {
     var vm = this;
 
-    // do things after the DOM loads fully
-    //window.addEventListener("load", function () {
-      //alert('DOM is loaded');
-      //document.getElementsByTagName("md-card")[0].innerHTML="<md-card-title>Search for journals</md-card-title><md-card-content><span translate=\"nui.journalsearch.category.description\">Use all the following options to find journals:</span><ul><li translate=\"nui.journalsearch.category.option1\">Enter a journal title in the search box.</li><!----><li translate=\"nui.journalsearch.category.option3\">Use the Journals by category option to browse journals by category.</li></ul></md-card-content>";
-    //});
+    this.$onInit = function(){
+      {
+        // do things after the DOM loads fully
+        //window.addEventListener("load", function () {
+        //alert('DOM is loaded');
+        //document.getElementsByTagName("md-card")[0].innerHTML="<md-card-title>Search for journals</md-card-title><md-card-content><span translate=\"nui.journalsearch.category.description\">Use all the following options to find journals:</span><ul><li translate=\"nui.journalsearch.category.option1\">Enter a journal title in the search box.</li><!----><li translate=\"nui.journalsearch.category.option3\">Use the Journals by category option to browse journals by category.</li></ul></md-card-content>";
+        //});
 
-    angular.element(document).ready(function () {
-      //alert('Document ready');
-      document.getElementsByClassName("padding-medium flex-xl-50 flex-md-50 flex-lg-50")[0].innerHTML="<md-card class=\"default-card _md md-primoExplore-theme\"><md-card-title><h2 translate=\"nui.journalsearch.category.journals\">Search for journals</h2></md-card-title><md-card-content><span translate=\"nui.journalsearch.category.description\">Use the following options to find journals:</span><ul><li translate=\"nui.journalsearch.category.option1\">Enter a journal title in the search box.</li><!----><li translate=\"nui.journalsearch.category.option3\">Use the Journals by category option to browse journals by category.</li></ul></md-card-content></md-card><md-card class=\"default-card _md md-primoExplore-theme\"><md-card-title><h2 translate=\"nui.journalsearch.category.journals\">Try BrowZine!</h2></md-card-title><md-card-content><span><img src=\"https://thirdiron.com/wp-content/uploads/2020/08/4.jpg\" alt=\"Browzine logo\" width=\"300\" height=\"200\" class=\"browzine\" /></span><ul><li translate=\"nui.journalsearch.category.option1\">BrowZine is a tablet, mobile, and web application that lets you browse, read, and monitor thousands of scholarly journals available from the UCLA Library. <a href=\"https://thirdiron.com/download-browzine/\">Download it now</a> or use the <a href=\"http://browzine.com/libraries/33/\">web version</a>.</li><!----></ul></md-card-content></md-card>";
-    });
+        angular.element(document).ready(function () {
+          //alert('Document ready');
+          document.getElementsByClassName("padding-medium flex-xl-50 flex-md-50 flex-lg-50")[0].innerHTML="<md-card class=\"default-card _md md-primoExplore-theme\"><md-card-title><h2 translate=\"nui.journalsearch.category.journals\">Search for journals</h2></md-card-title><md-card-content><span translate=\"nui.journalsearch.category.description\">Use the following options to find journals:</span><ul><li translate=\"nui.journalsearch.category.option1\">Enter a journal title in the search box.</li><!----><li translate=\"nui.journalsearch.category.option3\">Use the Journals by category option to browse journals by category.</li></ul></md-card-content></md-card><md-card class=\"default-card _md md-primoExplore-theme\"><md-card-title><h2 translate=\"nui.journalsearch.category.journals\">Try BrowZine!</h2></md-card-title><md-card-content><span><img src=\"https://thirdiron.com/wp-content/uploads/2020/08/4.jpg\" alt=\"Browzine logo\" width=\"300\" height=\"200\" class=\"browzine\" /></span><ul><li translate=\"nui.journalsearch.category.option1\">BrowZine is a tablet, mobile, and web application that lets you browse, read, and monitor thousands of scholarly journals available from the UCLA Library. <a href=\"https://thirdiron.com/download-browzine/\">Download it now</a> or use the <a href=\"http://browzine.com/libraries/33/\">web version</a>.</li><!----></ul></md-card-content></md-card>";
+        });
 
-    $scope.chat = function() {
-      var alert = $mdDialog.alert({
-         title: 'Attention',
-         clickOutsideToClose:true,
-         template: '<div id="libchat_secret_50402955"></div><style>.s-lch-widget-float.open { height: 55% !important;margin-top: 12% !important;}.s-lch-widget-float {bottom: 200px !important;}</style>',
-         scope: angular.extend($scope.$new(), { close: function() {$mdDialog.cancel();} })
-      });
-      $mdDialog.show(alert).finally(function() {
-        alert = undefined;
-      });
-    }
+        $scope.chat = function() {
+          var alert = $mdDialog.alert({
+             title: 'Attention',
+             clickOutsideToClose:true,
+             template: '<div id="libchat_secret_50402955"></div><style>.s-lch-widget-float.open { height: 55% !important;margin-top: 12% !important;}.s-lch-widget-float {bottom: 200px !important;}</style>',
+             scope: angular.extend($scope.$new(), { close: function() {$mdDialog.cancel();} })
+          });
+          $mdDialog.show(alert).finally(function() {
+            alert = undefined;
+          });
+        }
 
-    /*
-    $scope.closeHelp = function() {
-      document.getElementById('qp-need-help').style.right = '-200px';
-    }
-    setTimeout(function(){
-      document.getElementById('qp-need-help').style.right = '0px';
-    }, 15000);
-    */
+        /*
+        $scope.closeHelp = function() {
+          document.getElementById('qp-need-help').style.right = '-200px';
+        }
+        setTimeout(function(){
+          document.getElementById('qp-need-help').style.right = '0px';
+        }, 15000);
+        */
+      }
+    };
   }]);
 
   app.component('prmSearchResultToolBarAfter', {
@@ -657,12 +665,17 @@ app.component("prmAlmaOtherMembersAfter", {
     parentCtrl: "<", 
   }, 
   controller: [ 
-    function () { 
-      var ctrl = this; 
-      ctrl.parentCtrl.isCollapsed = true; 
+    function() {
+      var ctrl = this;
+
+      this.$onInit = function(){
+        {
+          ctrl.parentCtrl.isCollapsed = true;
+        }
+      };
     }, 
   ], 
-}); 
+});
 /* Collapse "Get It From Other Institutions" dropdown by default in full record display - END */
 /* Collapse "Get It From Other Institutions" dropdown by default in full record display - END */
 /* Collapse "Get It From Other Institutions" dropdown by default in full record display - END */
@@ -674,34 +687,3 @@ app.component("prmAlmaOtherMembersAfter", {
   });
 }());
 
-//Custom scripts
-/*
-angular.element(document).ready(function () {
-  alert('Test1!');
-  if (document.getElementById('tester')){
-    var el = document.getElementById('tester');
-    el.onclick = showTester;
-    document.getElementById('tester').innerHTML="abcabc"
-    
-    function showTester() {
-      alert('Test2!');
-      return false;
-    }
-  }
-});
-*/
-
-/*
-angular.element(document).ready(function () {
-        var clicked = false;
-        setInterval(function(){
-         var checkboxes = document.querySelectorAll('[aria-label="Expand My Results"]');
-         checkboxes.forEach(function(checkbox) {
-           if(!clicked){
-           clicked = true;
-           checkbox.click();
-          }
-         });
-       }, 0);
-  });
-  */
