@@ -396,7 +396,7 @@ md-autocomplete-parent-scope {
 }
 
 /* increase width of item request form */
-.layout-align-start-stretch, #form_field_pickupLocation .underlined-input, 
+#tab-content-40 .layout-align-start-stretch, #form_field_pickupLocation .underlined-input, 
 #form_field_termsOfUse .underlined-input, #form_field_comment .underlined-input, 
 md-input-container .md-input, .md-datepicker-input {
   width: 100%;
