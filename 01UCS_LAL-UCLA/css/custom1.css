@@ -504,6 +504,6 @@ md-input-container .md-input,
 }
 
 /* increase spacing in item detail lists */
-[role=listitem] {
+.word-break.layout-column[role=listitem] {
   margin-top: 4px;
 }
