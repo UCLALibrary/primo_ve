@@ -416,3 +416,6 @@ md-input-container .md-input, .md-datepicker-input {
 .word-break.layout-column[role=listitem] {
   margin-top: 4px;
 }
+.flex-gt-xs-25.flex-gt-sm-20.flex{
+  margin-top: 4px;
+}
