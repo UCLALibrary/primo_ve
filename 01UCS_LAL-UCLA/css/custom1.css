@@ -419,3 +419,11 @@ md-input-container .md-input, .md-datepicker-input {
 .flex-gt-xs-25.flex-gt-sm-20.flex{
   margin-top: 4px;
 }
+
+/* Hide "search inside" for physical-only journals */
+.button-right-align.search-within-p-only {
+  display: none;
+  }
+#searchWithinJournal.search-within-p-only {
+  display: none;
+} 
