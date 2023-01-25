@@ -691,5 +691,17 @@ app.component("prmAlmaOtherMembersAfter", {
   app.component('prmNoSearchResultAfter', {
     template: '<md-card class="default-card"><md-card-title><md-card-title-text><span class="md-headline">Where can I get research help?</span></md-card-title-text></md-card-title><md-card-content><ul><li><a href="https://www.library.ucla.edu/research-teaching-support/research-help">Ask a librarian</a></li><li><a href="https://guides.library.ucla.edu/search">Guide to using UC Library Search</a></li></ul><a href="https://library.ucla.edu" target="_blank" class="md-primoExplore-theme">UCLA Library homepage</a></md-card-content></md-card>'
   });
+
+  /* Special Collections help text box */
+  app.component('requestHintComponent', {
+    template: `<div layout="row" class="bar alert-bar zero-margin-bottom layout-align-center-center layout-row" layout-align="center center" 
+    style="background-color:transparent; border-color: var(--color-primary-blue-04); height: 45px; min-height: 45px; text-align:center">
+      <span class="bar-text margin-right-small" >For Special Collections, Film and Television Archive, and Clark Library materials, select the item's location below to display the Request link.</span></div>`
+  });
+  
+  app.component('prmRequestServicesAfter', {
+    bindings: {parentCtrl: `<`},
+    template: `<request-hint-component></request-hint-component>`    
+  });
 }());
 
