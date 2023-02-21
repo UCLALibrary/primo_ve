@@ -695,7 +695,7 @@ app.component("prmAlmaOtherMembersAfter", {
   /* Special Collections help text box */
   app.component('requestHintComponent', {
     template: `<div layout="row" class="alert-bar margin-bottom-small layout-align-center-center layout-row" layout-align="center center" 
-    style="background-color:transparent; border: 1px solid var(--color-primary-blue-04); border-radius: 3px; min-height: 45px; text-align:center">
+    style="background-color: var(--color-primary-blue-02); border: 1px solid var(--color-primary-blue-04); border-radius: 3px; min-height: 45px; text-align:center">
       <span class="bar-text margin-right-medium" >For Library Special Collections, UCLA Film and Television Archive, and Clark Library materials, select the item's location below to display the Request link.</span></div>`
   });
   
