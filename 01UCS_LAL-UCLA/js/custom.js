@@ -651,6 +651,7 @@
       var widget = document.getElementsByClassName("s-lch-widget-float");
       if(widget != null){
         widget[0].style.bottom = "1px";
+        widget[0].style.right = "50px";
         widget[0].style.height = "75%";
         widget[0].style.marginTop = "12%";
       }
