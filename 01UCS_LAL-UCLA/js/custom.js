@@ -617,7 +617,7 @@
           var alert = $mdDialog.alert({
              title: 'Attention',
              clickOutsideToClose:true,
-             template: '<div id="libchat_secret_50402955"></div><style>.s-lch-widget-float.open { height: 55% !important;margin-top: 12% !important;}.s-lch-widget-float {bottom: 200px !important;}</style>',
+             template: '<div id="libchat_secret_50402955"></div>',
              scope: angular.extend($scope.$new(), { close: function() {$mdDialog.cancel();} })
           });
           $mdDialog.show(alert).finally(function() {
@@ -647,15 +647,6 @@
     var lc = document.createElement('script'); lc.type = 'text/javascript';
     lc.src = 'https://v2.libanswers.com/load_chat.php?hash=libanswers_secret_86530858';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.append(lc);
-    setTimeout(()=>{
-      var widget = document.getElementsByClassName("s-lch-widget-float");
-      if(widget != null){
-        widget[0].style.bottom = "1px";
-        widget[0].style.right = "50px";
-        widget[0].style.height = "75%";
-        widget[0].style.marginTop = "12%";
-      }
-    },2000);
   })();
   /*---------------libchat code ends here---------------*/
   // LibChat - END

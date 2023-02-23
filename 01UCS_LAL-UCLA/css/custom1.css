@@ -427,3 +427,10 @@ md-input-container .md-input, .md-datepicker-input {
 #searchWithinJournal.search-within-p-only {
   display: none;
 } 
+
+.s-lch-widget-float-btn {
+  bottom: 1px !important;
+  right: 50px !important;
+  height: 75% !important;
+  margin-top: 12%; !important; 
+}
