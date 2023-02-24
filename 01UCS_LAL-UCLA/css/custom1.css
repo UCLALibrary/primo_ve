@@ -427,3 +427,7 @@ md-input-container .md-input, .md-datepicker-input {
 #searchWithinJournal.search-within-p-only {
   display: none;
 } 
+
+#speedDialWidget.page-nav {
+  bottom: 80px !important;
+}
