@@ -93,16 +93,7 @@ div.search-actions button.md-button.button-confirm, div.search-actions button.md
 .search-actions .md-button.button-confirm:hover:not([disabled]) {
   background-color: rgba(231, 245, 15, 0.45);
 }
-/*Change sign-in link colors for standalone login*/
-.login-dialog md-list md-list-item .md-list-item-text h3[translate="parallel.login.link1"], .login-dialog md-list md-list-item .md-list-item-text h3[translate="parallel.login.link2"] {
-  color: var(--color-secondary-yellow-600) !important;
-}
-prm-stand-alone-login div.login-header {
-  background-color: var(--color-primary-blue-04);
-}
-prm-stand-alone-login prm-icon md-icon svg{
-  color: var(--color-white) !important;
-}
+
 /*bookplate*/
 .bookplate{
   background-color: var(--color-primary-blue-04);
@@ -364,6 +355,55 @@ prm-stand-alone-login .md-button:hover:not([disabled]) {
 
 prm-stand-alone-login prm-login form > div .md-button:hover:not([disabled]) md-icon.md-primoExplore-theme {
   color: var(--color-secondary-blue-03) !important;
+}
+.login-dialog md-list md-list-item .md-list-item-text h3[translate="parallel.login.link1"], .login-dialog md-list md-list-item .md-list-item-text h3[translate="parallel.login.link2"] {
+  color: var(--color-secondary-yellow-600) !important;
+}
+prm-stand-alone-login div.login-header {
+  background-color: var(--color-primary-blue-04);
+}
+prm-stand-alone-login prm-icon md-icon svg{
+  color: var(--color-white) !important;
+}
+
+prm-stand-alone-login .layout-fill.layout-align-start-center.layout-column { 
+  background-color: var(--color-primary-blue-05);
+}
+prm-stand-alone-login .md-headline.light-text.layout-align-center-center.layout-row.flex,
+.layout-align-center-center.layout-row {
+  display: none;
+} 
+prm-stand-alone-login .layout-full-width.ng-pristine.ng-valid.layout-column {
+  border: 2px solid var(--color-white);
+  border-radius: 4px;
+} 
+prm-stand-alone-login h2.md-headline.light-text.layout-align-center-center.layout-row.flex {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: .01em;
+  color: var(--color-white);
+}
+prm-stand-alone-login h3.list-item-title.md-display-3 {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+prm-stand-alone-login p {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: .01em;
+  color: var(--color-white);
+}
+
+prm-stand-alone-login md-list.padded-container.md-primoExplore-theme {
+  padding: 0px;
 }
 
 /* sidebar in detail results */
