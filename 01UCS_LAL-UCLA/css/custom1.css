@@ -437,7 +437,7 @@ prm-stand-alone-login md-dialog-actions.layout-align-center-center.layout-row{
   max-width: 360px;
 }
 .login-dialog div.layout-align-center-center.layout-row{
-  margin-top: 36px !important;
+  margin-top: 46px !important;
   margin-left: 24px;
   margin-right: 24px;
 }
@@ -457,6 +457,10 @@ prm-stand-alone-login md-dialog-actions.layout-align-center-center.layout-row{
   line-height: 1.6;
   letter-spacing: .01em;
   color: var(--color-white);
+}
+
+prm-login-help a {
+  color: var(--color-white) !important;
 }
 
 /* sidebar in detail results */
