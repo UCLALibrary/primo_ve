@@ -1,4 +1,5 @@
 *.zip
+.DS_Store
 
 # Local app-specific secrets
 *secret*
