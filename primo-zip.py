@@ -52,12 +52,12 @@ def main():
     else:
         sys.exit("Folder name parameter must be specified.")
 
-    # zip info
-    directory = "./" + zip_name
+    # view is in the repo's top-level "views" directory
+    directory = "./views/" + zip_name
     if not os.path.isdir(directory):
         sys.exit(
             (
-                "Folder name parameter must match top-level directory name, "
+                "Folder name parameter must match view directory name, "
                 "with or without prefix (01UCS_LAL-)."
             )
         )

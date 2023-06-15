@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  primo:
+    # For now, build locally; may change this to an image when stable.
+    build: .
+    ports:
+      - 8003:8003
+      - 3001:3001
+    volumes:
+      - type: bind
+        source: ./packages
+        target: /home/node/primo-explore-devenv/packages
+      - type: bind
+        source: ./views
+        target: /home/node/primo-explore-devenv/primo-explore/custom
+    env_file:
+      - vars.env
