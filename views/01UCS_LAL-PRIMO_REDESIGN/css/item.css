@@ -94,6 +94,7 @@ div.full-view-section {
   ~ span {
   font-weight: bold !important;
 }
-.HTLink {
-  font-weight: bold !important;
+
+.full-view-section {
+  padding-left: 4em;
 }

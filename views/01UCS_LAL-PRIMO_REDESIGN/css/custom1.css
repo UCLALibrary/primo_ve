@@ -136,11 +136,6 @@ div.search-actions button.md-button.button-confirm prm-icon {
   white-space: pre-wrap !important;
 }
 
-/* change color of check at status*/
-.availability-status.Check.at {
-  color: #0f7d00 !important;
-}
-
 /* make ellipses modal lighter */
 md-dialog.light-on-dark-dialog {
   background-color: var(--color-primary-blue-05) !important;
@@ -206,17 +201,9 @@ prm-logo img {
   padding-left: 0px;
 }
 
-.full-view-section {
-  padding-left: 4em;
-}
-
 /* fix overlapping text in main search bar */
 md-autocomplete-parent-scope {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-#speedDialWidget.page-nav {
-  bottom: 80px !important;
 }

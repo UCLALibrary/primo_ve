@@ -45,3 +45,17 @@ prm-full-view .services-index-under .md-button {
 prm-full-view .services-index-under #services-index {
   max-width: 180px;
 }
+
+.HTLink {
+  font-weight: bold !important;
+}
+
+/* change color of check at status*/
+.availability-status.Check.at {
+  color: #0f7d00 !important;
+}
+
+/* "next page" button on browse results */
+#speedDialWidget.page-nav {
+  bottom: 80px !important;
+}
