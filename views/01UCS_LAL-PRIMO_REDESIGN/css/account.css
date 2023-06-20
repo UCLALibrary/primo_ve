@@ -1,0 +1,36 @@
+/* fines and fees colors */
+
+prm-account md-content.padded-container {
+  background-color: var(--color-white);
+}
+
+prm-account md-toolbar {
+  background: linear-gradient(
+    176.56deg,
+    #0b6ab7 -100.91%,
+    #1f75c5 26.1%,
+    #0a95eb 135.49%
+  );
+}
+
+prm-account md-toolbar h1 {
+  color: var(--color-white);
+}
+
+prm-account md-divider {
+  display: none;
+}
+
+prm-account md-list-item {
+  border: 2px solid var(--color-primary-blue-01);
+  border-radius: 4px;
+}
+
+prm-fines {
+  color: var(--color-black);
+}
+
+prm-fines .bold-text,
+prm-fines .items-count {
+  color: var(--color-primary-blue-03);
+}
