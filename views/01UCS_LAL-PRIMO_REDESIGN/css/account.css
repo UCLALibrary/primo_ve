@@ -45,3 +45,7 @@ md-tab-content {
 md-ink-bar {
   transition: unset !important;
 }
+
+prm-loan .overdue-line {
+  color: var(--status-error-02);
+}
