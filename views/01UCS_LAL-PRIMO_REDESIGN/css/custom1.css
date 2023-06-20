@@ -185,26 +185,7 @@ md-dialog.light-on-dark-dialog {
     top: 1.5em;
   }
 }
-/* External search: worldcat */
-/*
-div[data-facet-group="External Search"] h3 {
-  display: none;
-}
-*/
-#external-search .md-chip {
-  margin-bottom: 5px;
-}
-#external-search img {
-  float: left;
-  margin-right: 8px;
-}
-#external-search a {
-  font-weight: bold;
-}
-#external-search span {
-  display: block;
-  color: var(--color-secondary-grey-05);
-}
+
 /* View Main Menu on the services page / openURL page */
 prm-main-menu.isServicePage {
   display: block !important;
@@ -225,26 +206,8 @@ prm-logo img {
   padding-left: 0px;
 }
 
-/* sidebar in detail results */
-prm-full-view .services-index-under .md-button {
-  max-width: 180px;
-}
-prm-full-view .services-index-under #services-index {
-  max-width: 180px;
-}
 .full-view-section {
   padding-left: 4em;
-}
-
-/* remove icons and animations from My Library Card */
-prm-icon.giant-icon md-icon {
-  display: none;
-}
-md-tab-content {
-  transition: unset !important;
-}
-md-ink-bar {
-  transition: unset !important;
 }
 
 /* fix overlapping text in main search bar */

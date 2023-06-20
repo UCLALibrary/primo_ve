@@ -34,3 +34,14 @@ prm-fines .bold-text,
 prm-fines .items-count {
   color: var(--color-primary-blue-03);
 }
+
+/* remove icons and animations from My Library Card */
+prm-icon.giant-icon md-icon {
+  display: none;
+}
+md-tab-content {
+  transition: unset !important;
+}
+md-ink-bar {
+  transition: unset !important;
+}
