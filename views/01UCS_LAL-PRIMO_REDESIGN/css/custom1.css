@@ -1,5 +1,6 @@
 @import "login.css";
 @import "account.css";
+@import "item.css";
 
 :root {
   --color-white: #ffffff;
@@ -328,44 +329,6 @@ md-autocomplete-parent-scope {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-/* increase width of item request form */
-#tab-content-40 .layout-align-start-stretch,
-#form_field_pickupLocation .underlined-input,
-#form_field_termsOfUse .underlined-input,
-#form_field_comment .underlined-input,
-md-input-container .md-input,
-.md-datepicker-input {
-  width: 100%;
-}
-.md-datepicker-input {
-  max-width: 500px;
-}
-.md-datepicker-input-container {
-  width: 100%;
-  margin-left: -34px !important;
-}
-._md-datepicker-floating-label._md-datepicker-has-calendar-icon
-  md-datepicker
-  .md-datepicker-button {
-  left: -34px;
-}
-
-/* increase spacing in item detail lists */
-.word-break.layout-column[role="listitem"] {
-  margin-top: 4px;
-}
-.flex-gt-xs-25.flex-gt-sm-20.flex {
-  margin-top: 4px;
-}
-
-/* Hide "search inside" for physical-only journals */
-.button-right-align.search-within-p-only {
-  display: none;
-}
-#searchWithinJournal.search-within-p-only {
-  display: none;
 }
 
 #speedDialWidget.page-nav {
