@@ -151,21 +151,12 @@ button.bookplateBtn {
 div.full-view-section {
   margin-top: 0 !important;
 }
-/*disable new sign in*/
-prm-user-area {
-  /*display:block!important;*/
-}
-prm-user-area-expandable {
-  /*display:none!important;*/
-}
+
 /*hide rss button on saved searches*/
 div.saved-query-actions svg#rss {
   display: none;
 }
-/*hide sign-in banner*/
-prm-explore-main .alert-bar {
-  /*display:none;*/
-}
+
 /* CSS for vpn popup */
 .vpnButton {
   width: 100%;
