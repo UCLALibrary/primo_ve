@@ -1,0 +1,18 @@
+/*update css for color contrast */
+prm-search-result-availability-line
+  div.layout-row
+  div.layout-row
+  button.neutralized-button
+  span.button-content
+  span.availability-status.unavailable {
+  color: var(--color-secondary-grey-05) !important;
+}
+
+/*hide rss button on saved searches*/
+div.saved-query-actions svg#rss {
+  display: none;
+}
+
+prm-virtual-browse-item p span.weak-text {
+  color: var(--color-secondary-grey-05) !important;
+}

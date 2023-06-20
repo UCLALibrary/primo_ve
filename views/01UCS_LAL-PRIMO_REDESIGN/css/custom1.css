@@ -1,6 +1,7 @@
 @import "login.css";
 @import "account.css";
 @import "item.css";
+@import "search.css";
 
 :root {
   --color-white: #ffffff;
@@ -77,13 +78,7 @@ prm-logo .product-logo a:hover {
 span.best-location-library-code.locations-link {
   display: none;
 }
-/*Hide location title in full view since per ticket 201804098  */
-prm-location-items .tab-content-header .md-title {
-  display: none;
-}
-/* md-list-item.md-2-line .md-list-item-text h3 {
-   display: none;
- }*/
+
 span[translate="nui.request.request"] {
   display: none;
 }
@@ -127,38 +122,6 @@ div.search-actions button.md-button.button-confirm prm-icon {
   background-color: rgba(231, 245, 15, 0.45);
 }
 
-/*bookplate*/
-.bookplate {
-  background-color: var(--color-primary-blue-04);
-  text-align: center;
-  color: var(--color-white);
-  width: 200px;
-  height: 300px;
-  font-family: Didot, serif;
-  border: 3px double white;
-}
-button.bookplateBtn {
-  border: 1px solid var(--color-primary-blue-04);
-}
-.bookplateLink {
-  display: table;
-  padding: 5px;
-  border: 2px solid var(--color-secondary-yellow-600);
-}
-.bookplateLinkText {
-  display: table-cell;
-  vertical-align: middle;
-  font-weight: bold;
-}
-div.full-view-section {
-  margin-top: 0 !important;
-}
-
-/*hide rss button on saved searches*/
-div.saved-query-actions svg#rss {
-  display: none;
-}
-
 /* CSS for vpn popup */
 .vpnButton {
   width: 100%;
@@ -172,52 +135,12 @@ div.saved-query-actions svg#rss {
   overflow-x: hidden !important;
   white-space: pre-wrap !important;
 }
-/*update css for color contrast */
-prm-search-result-availability-line
-  div.layout-row
-  div.layout-row
-  button.neutralized-button
-  span.button-content
-  span.availability-status.unavailable {
-  color: var(--color-secondary-grey-05) !important;
-}
-prm-virtual-browse-item p span.weak-text {
-  color: var(--color-secondary-grey-05) !important;
-}
+
 /* change color of check at status*/
 .availability-status.Check.at {
   color: #0f7d00 !important;
 }
-/* make call number more visible */
-.full-view-container .best-location-sub-location,
-.full-view-container .best-location-delivery {
-  font-weight: bold;
-}
-.full-view-container .md-list-item-text p span.availability-status ~ span {
-  font-weight: bold !important;
-}
-.full-view-container .md-list-item-text p span.availability-status + span {
-  display: none !important;
-}
-.full-view-container
-  prm-location-items
-  .layout-column
-  p
-  span.availability-status
-  + span {
-  display: none !important;
-}
-.full-view-container
-  prm-location-items
-  .layout-column
-  p
-  span.availability-status
-  ~ span {
-  font-weight: bold !important;
-}
-.HTLink {
-  font-weight: bold !important;
-}
+
 /* make ellipses modal lighter */
 md-dialog.light-on-dark-dialog {
   background-color: var(--color-primary-blue-05) !important;
