@@ -1,0 +1,100 @@
+/* increase spacing in item detail lists */
+.word-break.layout-column[role="listitem"] {
+  margin-top: 4px;
+}
+.flex-gt-xs-25.flex-gt-sm-20.flex {
+  margin-top: 4px;
+}
+
+/* Hide "search inside" for physical-only journals */
+.button-right-align.search-within-p-only {
+  display: none;
+}
+#searchWithinJournal.search-within-p-only {
+  display: none;
+}
+
+/* increase width of item request form */
+#tab-content-40 .layout-align-start-stretch,
+#form_field_pickupLocation .underlined-input,
+#form_field_termsOfUse .underlined-input,
+#form_field_comment .underlined-input,
+md-input-container .md-input,
+.md-datepicker-input {
+  width: 100%;
+}
+.md-datepicker-input {
+  max-width: 500px;
+}
+.md-datepicker-input-container {
+  width: 100%;
+  margin-left: -34px !important;
+}
+._md-datepicker-floating-label._md-datepicker-has-calendar-icon
+  md-datepicker
+  .md-datepicker-button {
+  left: -34px;
+}
+/*Hide location title in full view since per ticket 201804098  */
+prm-location-items .tab-content-header .md-title {
+  display: none;
+}
+
+/*bookplate*/
+.bookplate {
+  background-color: var(--color-primary-blue-04);
+  text-align: center;
+  color: var(--color-white);
+  width: 200px;
+  height: 300px;
+  font-family: Didot, serif;
+  border: 3px double white;
+}
+button.bookplateBtn {
+  border: 1px solid var(--color-primary-blue-04);
+}
+.bookplateLink {
+  display: table;
+  padding: 5px;
+  border: 2px solid var(--color-secondary-yellow-600);
+}
+.bookplateLinkText {
+  display: table-cell;
+  vertical-align: middle;
+  font-weight: bold;
+}
+div.full-view-section {
+  margin-top: 0 !important;
+}
+
+/* make call number more visible */
+.full-view-container .best-location-sub-location,
+.full-view-container .best-location-delivery {
+  font-weight: bold;
+}
+.full-view-container .md-list-item-text p span.availability-status ~ span {
+  font-weight: bold !important;
+}
+.full-view-container .md-list-item-text p span.availability-status + span {
+  display: none !important;
+}
+.full-view-container
+  prm-location-items
+  .layout-column
+  p
+  span.availability-status
+  + span {
+  display: none !important;
+}
+.full-view-container
+  prm-location-items
+  .layout-column
+  p
+  span.availability-status
+  ~ span {
+  font-weight: bold !important;
+}
+
+.full-view-section {
+  padding-left: 4em;
+}

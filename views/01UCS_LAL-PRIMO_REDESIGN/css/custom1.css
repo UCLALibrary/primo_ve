@@ -1,3 +1,8 @@
+@import "login.css";
+@import "account.css";
+@import "item.css";
+@import "search.css";
+
 :root {
   --color-white: #ffffff;
   --color-black: #0f0f0f;
@@ -30,6 +35,7 @@
   --color-help-green-03: #00e0e0;
   --color-visit-fushia-03: #ff94db;
   --color-about-purple-03: #c099ff;
+  --status-error-02: #b3070d;
 }
 
 @font-face {
@@ -73,13 +79,7 @@ prm-logo .product-logo a:hover {
 span.best-location-library-code.locations-link {
   display: none;
 }
-/*Hide location title in full view since per ticket 201804098  */
-prm-location-items .tab-content-header .md-title {
-  display: none;
-}
-/* md-list-item.md-2-line .md-list-item-text h3 {
-   display: none;
- }*/
+
 span[translate="nui.request.request"] {
   display: none;
 }
@@ -123,47 +123,6 @@ div.search-actions button.md-button.button-confirm prm-icon {
   background-color: rgba(231, 245, 15, 0.45);
 }
 
-/*bookplate*/
-.bookplate {
-  background-color: var(--color-primary-blue-04);
-  text-align: center;
-  color: var(--color-white);
-  width: 200px;
-  height: 300px;
-  font-family: Didot, serif;
-  border: 3px double white;
-}
-button.bookplateBtn {
-  border: 1px solid var(--color-primary-blue-04);
-}
-.bookplateLink {
-  display: table;
-  padding: 5px;
-  border: 2px solid var(--color-secondary-yellow-600);
-}
-.bookplateLinkText {
-  display: table-cell;
-  vertical-align: middle;
-  font-weight: bold;
-}
-div.full-view-section {
-  margin-top: 0 !important;
-}
-/*disable new sign in*/
-prm-user-area {
-  /*display:block!important;*/
-}
-prm-user-area-expandable {
-  /*display:none!important;*/
-}
-/*hide rss button on saved searches*/
-div.saved-query-actions svg#rss {
-  display: none;
-}
-/*hide sign-in banner*/
-prm-explore-main .alert-bar {
-  /*display:none;*/
-}
 /* CSS for vpn popup */
 .vpnButton {
   width: 100%;
@@ -177,52 +136,7 @@ prm-explore-main .alert-bar {
   overflow-x: hidden !important;
   white-space: pre-wrap !important;
 }
-/*update css for color contrast */
-prm-search-result-availability-line
-  div.layout-row
-  div.layout-row
-  button.neutralized-button
-  span.button-content
-  span.availability-status.unavailable {
-  color: var(--color-secondary-grey-05) !important;
-}
-prm-virtual-browse-item p span.weak-text {
-  color: var(--color-secondary-grey-05) !important;
-}
-/* change color of check at status*/
-.availability-status.Check.at {
-  color: #0f7d00 !important;
-}
-/* make call number more visible */
-.full-view-container .best-location-sub-location,
-.full-view-container .best-location-delivery {
-  font-weight: bold;
-}
-.full-view-container .md-list-item-text p span.availability-status ~ span {
-  font-weight: bold !important;
-}
-.full-view-container .md-list-item-text p span.availability-status + span {
-  display: none !important;
-}
-.full-view-container
-  prm-location-items
-  .layout-column
-  p
-  span.availability-status
-  + span {
-  display: none !important;
-}
-.full-view-container
-  prm-location-items
-  .layout-column
-  p
-  span.availability-status
-  ~ span {
-  font-weight: bold !important;
-}
-.HTLink {
-  font-weight: bold !important;
-}
+
 /* make ellipses modal lighter */
 md-dialog.light-on-dark-dialog {
   background-color: var(--color-primary-blue-05) !important;
@@ -267,26 +181,7 @@ md-dialog.light-on-dark-dialog {
     top: 1.5em;
   }
 }
-/* External search: worldcat */
-/*
-div[data-facet-group="External Search"] h3 {
-  display: none;
-}
-*/
-#external-search .md-chip {
-  margin-bottom: 5px;
-}
-#external-search img {
-  float: left;
-  margin-right: 8px;
-}
-#external-search a {
-  font-weight: bold;
-}
-#external-search span {
-  display: block;
-  color: var(--color-secondary-grey-05);
-}
+
 /* View Main Menu on the services page / openURL page */
 prm-main-menu.isServicePage {
   display: block !important;
@@ -307,344 +202,9 @@ prm-logo img {
   padding-left: 0px;
 }
 
-/* modal login */
-md-dialog.light-on-dark-dialog {
-  background-color: var(--color-primary-blue-05) !important;
-}
-
-md-dialog.light-on-dark-dialog
-  .md-list[class$="-line"]
-  md-list-item.list-login
-  .md-button,
-md-dialog.light-on-dark-dialog .md-list md-list-item.list-login .md-button,
-md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button,
-md-dialog.light-on-dark-dialog
-  md-list
-  md-list-item.list-login
-  .md-button:hover:not([disabled]),
-md-dialog.light-on-dark-dialog
-  md-list
-  md-list-item.list-login
-  .md-button:focus:not([disabled]) {
-  color: var(--color-white);
-}
-
-.login-dialog md-list md-list-item .md-list-item-text .list-item-title,
-.login-dialog md-list md-list-item .md-list-item-text h3,
-.login-dialog
-  md-list
-  md-list-item
-  > .md-no-style
-  .md-list-item-text
-  .list-item-title,
-.login-dialog md-list md-list-item > .md-no-style .md-list-item-text h3,
-.light-on-dark-dialog .md-button.button-confirm {
-  color: var(--color-white) !important;
-}
-
-md-dialog-content md-input-container:after {
-  background-color: var(--color-secondary-yellow-600);
-}
-
-.light-on-dark-dialog .md-button.button-confirm:hover:not([disabled]),
-.light-on-dark-dialog .md-button.button-confirm:focus:not([disabled]) {
-  color: var(--color-secondary-blue-03) !important;
-}
-
-.light-on-dark-dialog .md-button.button-as-link {
-  color: var(--color-default-cyan-01);
-}
-
-/* stand alone login */
-prm-stand-alone-login ::selection {
-  background-color: var(--color-black);
-}
-
-prm-stand-alone-login div.login-header,
-prm-stand-alone-login md-card.login-dialog {
-  background-color: var(--color-primary-blue-05);
-  color: var(--color-white) !important;
-}
-
-prm-stand-alone-login prm-logo .product-logo .organization-logo:focus,
-prm-stand-alone-login prm-logo .product-logo .organization-logo:hover {
-  box-shadow: none;
-}
-
-prm-stand-alone-login .login-card.login-dialog md-list {
-  padding: 1.5em;
-}
-
-prm-stand-alone-login .login-card md-list-item.login-brighter-dialog .md-button,
-prm-stand-alone-login
-  .login-card
-  md-list-item.login-brighter-dialog
-  .md-button:focus,
-prm-stand-alone-login
-  .login-card
-  md-list-item.login-brighter-dialog
-  .md-button:hover {
-  background-color: var(--color-primary-blue-05) !important;
-}
-
-prm-stand-alone-login p,
-prm-stand-alone-login prm-login [external-link],
-prm-stand-alone-login md-input-container label:not(.md-no-float),
-prm-stand-alone-login md-input-container input,
-prm-stand-alone-login prm-icon md-icon.md-primoExplore-theme {
-  color: var(--color-white) !important;
-}
-
-prm-stand-alone-login
-  md-input-container:not(.md-input-has-value):not(.md-input-has-placeholder)
-  input:not(:focus),
-prm-stand-alone-login
-  md-input-container:not(.md-input-has-value):not(.md-input-has-placeholder)
-  input:not(:hover) {
-  border-color: hsla(0, 0%, 100%, 0.5);
-}
-
-prm-stand-alone-login prm-login-help .md-button.button-as-link {
-  color: var(--color-default-cyan-01);
-}
-
-prm-stand-alone-login prm-login .md-button.button-confirm {
-  color: var(--color-secondary-yellow-600);
-}
-
-prm-stand-alone-login prm-login .md-button.button-confirm:focus:not([disabled]),
-prm-stand-alone-login prm-login .md-button.button-confirm:hover:not([disabled]),
-prm-stand-alone-login .md-button.button-as-link:focus:not([disabled]),
-prm-stand-alone-login .md-button.button-as-link:hover:not([disabled]),
-prm-stand-alone-login .md-button:hover:not([disabled]) {
-  background-color: var(--color-white);
-  color: var(--color-secondary-blue-03);
-}
-
-prm-stand-alone-login
-  prm-login
-  form
-  > div
-  .md-button:hover:not([disabled])
-  md-icon.md-primoExplore-theme {
-  color: var(--color-secondary-blue-03) !important;
-}
-.login-dialog
-  md-list
-  md-list-item
-  .md-list-item-text
-  h3[translate="parallel.login.link1"],
-.login-dialog
-  md-list
-  md-list-item
-  .md-list-item-text
-  h3[translate="parallel.login.link2"] {
-  color: var(--color-secondary-yellow-600) !important;
-}
-
-prm-stand-alone-login prm-icon md-icon svg {
-  color: var(--color-white) !important;
-}
-
-prm-stand-alone-login .layout-fill.layout-align-start-center.layout-column {
-  background-color: var(--color-primary-blue-05);
-}
-
-prm-stand-alone-login .layout-full-width.ng-pristine.ng-valid.layout-column {
-  border: 2px solid var(--color-white);
-  border-radius: 4px;
-  margin-bottom: 50vh;
-}
-prm-stand-alone-login
-  h2.md-headline.light-text.layout-align-center-center.layout-row.flex {
-  font-family: Karbon, Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-  color: var(--color-white);
-}
-
-prm-stand-alone-login div.layout-align-center-center.layout-row {
-  margin-top: 36px !important;
-  margin-left: 24px;
-  margin-right: 24px;
-  margin-bottom: 24px;
-}
-
-prm-stand-alone-login h3.list-item-title.md-display-3 {
-  font-family: Karbon, Helvetica, Arial, sans-serif;
-  font-size: 26px !important;
-  font-weight: 500 !important;
-  line-height: 1.2;
-  color: var(--color-white);
-}
-
-prm-stand-alone-login p {
-  font-family: Karbon, Helvetica, Arial, sans-serif;
-  font-size: 20px !important;
-  font-weight: 400 !important;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-  color: var(--color-white);
-}
-
-prm-stand-alone-login md-list-item {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-
-prm-stand-alone-login md-list.padded-container.md-primoExplore-theme {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 10px;
-}
-
-prm-stand-alone-login md-dialog-actions.layout-align-center-center.layout-row {
-  min-height: 36px;
-}
-
-.login-dialog h2.md-headline {
-  font-family: Karbon, Helvetica, Arial, sans-serif;
-  font-size: 20px !important;
-  font-weight: 500 !important;
-  line-height: 1.6;
-  color: var(--color-white);
-}
-.login-dialog {
-  max-width: 360px;
-}
-.login-dialog div.layout-align-center-center.layout-row {
-  margin-top: 46px !important;
-  margin-left: 24px;
-  margin-right: 24px;
-}
-
-.login-dialog h3.list-item-title.md-display-3 {
-  font-family: Karbon, Helvetica, Arial, sans-serif;
-  font-size: 26px !important;
-  font-weight: 500 !important;
-  line-height: 1.2;
-  color: var(--color-white);
-}
-
-.login-dialog p {
-  font-family: Karbon, Helvetica, Arial, sans-serif;
-  font-size: 20px !important;
-  font-weight: 400 !important;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-  color: var(--color-white);
-}
-
-prm-login-help a {
-  color: var(--color-white) !important;
-}
-
-/* sidebar in detail results */
-prm-full-view .services-index-under .md-button {
-  max-width: 180px;
-}
-prm-full-view .services-index-under #services-index {
-  max-width: 180px;
-}
-.full-view-section {
-  padding-left: 4em;
-}
-
-/* remove icons and animations from My Library Card */
-prm-icon.giant-icon md-icon {
-  display: none;
-}
-md-tab-content {
-  transition: unset !important;
-}
-md-ink-bar {
-  transition: unset !important;
-}
-
 /* fix overlapping text in main search bar */
 md-autocomplete-parent-scope {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-/* increase width of item request form */
-#tab-content-40 .layout-align-start-stretch,
-#form_field_pickupLocation .underlined-input,
-#form_field_termsOfUse .underlined-input,
-#form_field_comment .underlined-input,
-md-input-container .md-input,
-.md-datepicker-input {
-  width: 100%;
-}
-.md-datepicker-input {
-  max-width: 500px;
-}
-.md-datepicker-input-container {
-  width: 100%;
-  margin-left: -34px !important;
-}
-._md-datepicker-floating-label._md-datepicker-has-calendar-icon
-  md-datepicker
-  .md-datepicker-button {
-  left: -34px;
-}
-
-/* increase spacing in item detail lists */
-.word-break.layout-column[role="listitem"] {
-  margin-top: 4px;
-}
-.flex-gt-xs-25.flex-gt-sm-20.flex {
-  margin-top: 4px;
-}
-
-/* Hide "search inside" for physical-only journals */
-.button-right-align.search-within-p-only {
-  display: none;
-}
-#searchWithinJournal.search-within-p-only {
-  display: none;
-}
-
-#speedDialWidget.page-nav {
-  bottom: 80px !important;
-}
-
-/* fines and fees colors */
-
-prm-account md-content.padded-container {
-  background-color: var(--color-white);
-}
-
-prm-account md-toolbar {
-  background: linear-gradient(
-    176.56deg,
-    #0b6ab7 -100.91%,
-    #1f75c5 26.1%,
-    #0a95eb 135.49%
-  );
-}
-
-prm-account md-toolbar h1 {
-  color: var(--color-white);
-}
-
-prm-account md-divider {
-  display: none;
-}
-
-prm-account md-list-item {
-  border: 2px solid var(--color-primary-blue-01);
-  border-radius: 4px;
-}
-
-prm-fines {
-  color: var(--color-black);
-}
-
-prm-fines .bold-text,
-prm-fines .items-count {
-  color: var(--color-primary-blue-03);
 }

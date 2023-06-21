@@ -1,0 +1,61 @@
+/*update css for color contrast */
+prm-search-result-availability-line
+  div.layout-row
+  div.layout-row
+  button.neutralized-button
+  span.button-content
+  span.availability-status.unavailable {
+  color: var(--color-secondary-grey-05) !important;
+}
+
+/*hide rss button on saved searches*/
+div.saved-query-actions svg#rss {
+  display: none;
+}
+
+prm-virtual-browse-item p span.weak-text {
+  color: var(--color-secondary-grey-05) !important;
+}
+
+/* External search: worldcat */
+/*
+div[data-facet-group="External Search"] h3 {
+  display: none;
+}
+*/
+#external-search .md-chip {
+  margin-bottom: 5px;
+}
+#external-search img {
+  float: left;
+  margin-right: 8px;
+}
+#external-search a {
+  font-weight: bold;
+}
+#external-search span {
+  display: block;
+  color: var(--color-secondary-grey-05);
+}
+
+/* sidebar in detail results */
+prm-full-view .services-index-under .md-button {
+  max-width: 180px;
+}
+prm-full-view .services-index-under #services-index {
+  max-width: 180px;
+}
+
+.HTLink {
+  font-weight: bold !important;
+}
+
+/* change color of check at status*/
+.availability-status.Check.at {
+  color: #0f7d00 !important;
+}
+
+/* "next page" button on browse results */
+#speedDialWidget.page-nav {
+  bottom: 80px !important;
+}
