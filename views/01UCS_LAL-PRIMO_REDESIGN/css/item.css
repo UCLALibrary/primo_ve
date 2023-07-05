@@ -98,3 +98,29 @@ div.full-view-section {
 .full-view-section {
   padding-left: 4em;
 }
+
+/* redesign colors and fonts */
+prm-full-view .full-view-inner-container,
+.full-view-spacer,
+prm-full-view-cont md-content {
+  background-color: var(--color-white) !important;
+}
+
+.availability-status.available_in_library {
+  color: var(--status-success-02);
+}
+
+/* metadata labels */
+#item-details .bold-text {
+  font-family: "Karbon";
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.full-view-section .section-title {
+  font-family: "Karbon";
+  font-weight: 600;
+  line-height: 100%;
+  font-size: 36px;
+}
