@@ -38,9 +38,10 @@
 }
 
 /*  Top Warning Bar Message:
-    Enable & edit manually when needed; be sure to disable afterwards.
+    Enable & edit manually when needed; be sure to disable via comment block afterwards.
     Thanks to https://www.carli.illinois.edu/products-services/i-share/discovery-interface/custom_package_topbanner
  */
+/* 
 body::before {
   content: "We're experiencing a system disruption as part of system maintenance.  Your search results may not be accurate during this time.";
   display: inline-block;
@@ -49,6 +50,7 @@ body::before {
   width: 100%;
   font-weight: bold;
 }
+*/
 /* END Top Warning Bar Message */
 
 /*Top Banner Background Color */
