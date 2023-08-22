@@ -83,6 +83,12 @@ span.best-location-library-code.locations-link {
 span[translate="nui.request.request"] {
   display: none;
 }
+
+/* Body of most (all?) pages should be white */
+body {
+  background-color: var(--color-white);
+}
+
 /*match UCSC font*/
 body .header {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
