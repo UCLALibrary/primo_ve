@@ -37,6 +37,22 @@
   src: url("karbon-web-medium.woff") format("woff");
 }
 
+/*  Top Warning Bar Message:
+    Enable & edit manually when needed; be sure to disable via comment block afterwards.
+    Thanks to https://www.carli.illinois.edu/products-services/i-share/discovery-interface/custom_package_topbanner
+ */
+/* 
+body::before {
+  content: "We're experiencing a system disruption as part of system maintenance.  Your search results may not be accurate during this time.";
+  display: inline-block;
+  background: var(--color-primary-yellow-01);
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+*/
+/* END Top Warning Bar Message */
+
 /*Top Banner Background Color */
 .prm-primary-bg.prm-hue1,
 prm-spinner.prm-hue1.overlay-cover.light-on-dark:after,
