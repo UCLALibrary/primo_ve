@@ -1,0 +1,234 @@
+/* modal login */
+md-dialog.light-on-dark-dialog {
+  background-color: var(--color-primary-blue-05) !important;
+}
+
+md-dialog.light-on-dark-dialog
+  .md-list[class$="-line"]
+  md-list-item.list-login
+  .md-button,
+md-dialog.light-on-dark-dialog .md-list md-list-item.list-login .md-button,
+md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button,
+md-dialog.light-on-dark-dialog
+  md-list
+  md-list-item.list-login
+  .md-button:hover:not([disabled]),
+md-dialog.light-on-dark-dialog
+  md-list
+  md-list-item.list-login
+  .md-button:focus:not([disabled]) {
+  color: var(--color-white);
+}
+
+.login-dialog md-list md-list-item .md-list-item-text .list-item-title,
+.login-dialog md-list md-list-item .md-list-item-text h3,
+.login-dialog
+  md-list
+  md-list-item
+  > .md-no-style
+  .md-list-item-text
+  .list-item-title,
+.login-dialog md-list md-list-item > .md-no-style .md-list-item-text h3,
+.light-on-dark-dialog .md-button.button-confirm {
+  color: var(--color-white) !important;
+}
+
+md-dialog-content md-input-container:after {
+  background-color: var(--color-secondary-yellow-600);
+}
+
+.light-on-dark-dialog .md-button.button-confirm:hover:not([disabled]),
+.light-on-dark-dialog .md-button.button-confirm:focus:not([disabled]) {
+  color: var(--color-secondary-blue-03) !important;
+}
+
+.light-on-dark-dialog .md-button.button-as-link {
+  color: var(--color-default-cyan-01);
+}
+
+/* stand alone login */
+prm-stand-alone-login ::selection {
+  background-color: var(--color-black);
+}
+
+prm-stand-alone-login div.login-header,
+prm-stand-alone-login md-card.login-dialog {
+  background-color: var(--color-primary-blue-05);
+  color: var(--color-white) !important;
+}
+
+prm-stand-alone-login prm-logo .product-logo .organization-logo:focus,
+prm-stand-alone-login prm-logo .product-logo .organization-logo:hover {
+  box-shadow: none;
+}
+
+prm-stand-alone-login .login-card.login-dialog md-list {
+  padding: 1.5em;
+}
+
+prm-stand-alone-login .login-card md-list-item.login-brighter-dialog .md-button,
+prm-stand-alone-login
+  .login-card
+  md-list-item.login-brighter-dialog
+  .md-button:focus,
+prm-stand-alone-login
+  .login-card
+  md-list-item.login-brighter-dialog
+  .md-button:hover {
+  background-color: var(--color-primary-blue-05) !important;
+}
+
+prm-stand-alone-login p,
+prm-stand-alone-login prm-login [external-link],
+prm-stand-alone-login md-input-container label:not(.md-no-float),
+prm-stand-alone-login md-input-container input,
+prm-stand-alone-login prm-icon md-icon.md-primoExplore-theme {
+  color: var(--color-white) !important;
+}
+
+prm-stand-alone-login
+  md-input-container:not(.md-input-has-value):not(.md-input-has-placeholder)
+  input:not(:focus),
+prm-stand-alone-login
+  md-input-container:not(.md-input-has-value):not(.md-input-has-placeholder)
+  input:not(:hover) {
+  border-color: hsla(0, 0%, 100%, 0.5);
+}
+
+prm-stand-alone-login prm-login-help .md-button.button-as-link {
+  color: var(--color-default-cyan-01);
+}
+
+prm-stand-alone-login prm-login .md-button.button-confirm {
+  color: var(--color-secondary-yellow-600);
+}
+
+prm-stand-alone-login prm-login .md-button.button-confirm:focus:not([disabled]),
+prm-stand-alone-login prm-login .md-button.button-confirm:hover:not([disabled]),
+prm-stand-alone-login .md-button.button-as-link:focus:not([disabled]),
+prm-stand-alone-login .md-button.button-as-link:hover:not([disabled]),
+prm-stand-alone-login .md-button:hover:not([disabled]) {
+  background-color: var(--color-white);
+  color: var(--color-secondary-blue-03);
+}
+
+prm-stand-alone-login
+  prm-login
+  form
+  > div
+  .md-button:hover:not([disabled])
+  md-icon.md-primoExplore-theme {
+  color: var(--color-secondary-blue-03) !important;
+}
+.login-dialog
+  md-list
+  md-list-item
+  .md-list-item-text
+  h3[translate="parallel.login.link1"],
+.login-dialog
+  md-list
+  md-list-item
+  .md-list-item-text
+  h3[translate="parallel.login.link2"] {
+  color: var(--color-secondary-yellow-600) !important;
+}
+
+prm-stand-alone-login prm-icon md-icon svg {
+  color: var(--color-white) !important;
+}
+
+prm-stand-alone-login .layout-fill.layout-align-start-center.layout-column {
+  background-color: var(--color-primary-blue-05);
+}
+
+prm-stand-alone-login .layout-full-width.ng-pristine.ng-valid.layout-column {
+  border: 2px solid var(--color-white);
+  border-radius: 4px;
+  margin-bottom: 50vh;
+}
+prm-stand-alone-login
+  h2.md-headline.light-text.layout-align-center-center.layout-row.flex {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--color-white);
+}
+
+prm-stand-alone-login div.layout-align-center-center.layout-row {
+  margin-top: 36px !important;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+prm-stand-alone-login h3.list-item-title.md-display-3 {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 26px !important;
+  font-weight: 500 !important;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+prm-stand-alone-login p {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--color-white);
+}
+
+prm-stand-alone-login md-list-item {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+prm-stand-alone-login md-list.padded-container.md-primoExplore-theme {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+}
+
+prm-stand-alone-login md-dialog-actions.layout-align-center-center.layout-row {
+  min-height: 36px;
+}
+
+.login-dialog h2.md-headline {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 1.6;
+  color: var(--color-white);
+}
+.login-dialog {
+  max-width: 360px;
+}
+.login-dialog div.layout-align-center-center.layout-row {
+  margin-top: 46px !important;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.login-dialog h3.list-item-title.md-display-3 {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 26px !important;
+  font-weight: 500 !important;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+.login-dialog p {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--color-white);
+}
+
+prm-login-help a {
+  color: var(--color-white) !important;
+}
+fdd

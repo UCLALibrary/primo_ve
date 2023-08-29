@@ -1,0 +1,635 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #0f0f0f;
+  --color-primary-yellow-01: #ffe800;
+  --color-primary-blue-01: #eaf2fb;
+  --color-primary-blue-02: #9ecffa;
+  --color-primary-blue-03: #0b6ab7;
+  --color-primary-blue-04: #0055a6;
+  --color-primary-blue-05: #032d5b;
+  --color-secondary-yellow-01: #ffe92e;
+  --color-secondary-yellow-02: #ffdb20;
+  --color-secondary-yellow-03: #ffd600;
+  --color-secondary-blue-01: #288fe8;
+  --color-secondary-blue-02: #1678d0;
+  --color-secondary-blue-03: #1f75c5;
+  --color-secondary-grey-01: #f2f2f2;
+  --color-secondary-grey-02: #dcdcdb;
+  --color-secondary-grey-03: #999999;
+  --color-secondary-grey-04: #717171;
+  --color-secondary-grey-05: #434343;
+  --color-default-cyan-01: #c7f8ff;
+  --color-help-green-01: #b9f8ee;
+  --color-visit-fushia-01: #ffdcff;
+  --color-about-purple-01: #efe5ff;
+  --color-default-cyan-02: #5cd9ff;
+  --color-help-green-02: #87fbe8;
+  --color-visit-fushia-02: #ffbdf4;
+  --color-about-purple-02: #e7dbff;
+  --color-default-cyan-03: #0aa5ff;
+  --color-help-green-03: #00e0e0;
+  --color-visit-fushia-03: #ff94db;
+  --color-about-purple-03: #c099ff;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("karbon-web-medium.woff") format("woff");
+}
+
+/*  Top Warning Bar Message:
+    Enable & edit manually when needed; be sure to disable via comment block afterwards.
+    Thanks to https://www.carli.illinois.edu/products-services/i-share/discovery-interface/custom_package_topbanner
+ */
+/* 
+body::before {
+  content: "We're experiencing a system disruption as part of system maintenance.  Your search results may not be accurate during this time.";
+  display: inline-block;
+  background: var(--color-primary-yellow-01);
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+*/
+/* END Top Warning Bar Message */
+
+/*Top Banner Background Color */
+.prm-primary-bg.prm-hue1,
+prm-spinner.prm-hue1.overlay-cover.light-on-dark:after,
+prm-topbar .top-nav-bar,
+prm-search-bar.prm-hue1 {
+  background-color: var(--color-primary-blue-04);
+}
+.prm-primary-bg.prm-hue1,
+prm-search-bar.prm-hue1,
+prm-spinner.prm-hue1.overlay-cover.light-on-dark:after,
+prm-topbar .top-nav-bar {
+  background-color: #003b5c;
+}
+
+/*!!!!!!!  TOPBAR - USER AREA - HOVER COLOR !!!!!!!!*/
+md-fab-toolbar md-toolbar {
+  background-color: var(--color-primary-blue-04) !important;
+  pointer-events: none;
+  z-index: 23;
+}
+/*Search Bar Wrapper color */
+prm-search-bar,
+prm-atoz-search-bar,
+prm-journals-search-bar,
+prm-browse-search-bar,
+prm-tags-search-bar,
+.prm-primary-bg,
+prm-collection-gallery-header .collection-header-inner,
+prm-newspapers-search-bar,
+prm-spinner.overlay-cover.light-on-dark:after {
+  background-color: var(--color-primary-blue-03);
+}
+/*Remove blue line underneath image on hover */
+prm-logo .product-logo a:hover {
+  background-color: transparent;
+  text-transform: none;
+  box-shadow: none;
+}
+/*Hide library in the brief and full displays since Locations also contain the library name */
+span.best-location-library-code.locations-link {
+  display: none;
+}
+/*Hide location title in full view since per ticket 201804098  */
+prm-location-items .tab-content-header .md-title {
+  display: none;
+}
+/* md-list-item.md-2-line .md-list-item-text h3 {
+   display: none;
+ }*/
+span[translate="nui.request.request"] {
+  display: none;
+}
+/*match UCSC font*/
+body .header {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*Hide 'Expand My Results' checkbox
+md-checkbox[aria-label="Expand My Results"]{
+display: none;
+}
+*/
+/*Increase the width of the element that includes location and call number */
+div.flex-xs-100.flex {
+  min-width: fit-content;
+}
+/*Change sign-in, and ellipses link colors */
+md-dialog.light-on-dark-dialog
+  md-list
+  md-list-item
+  .md-list-item-text
+  .list-item-title,
+md-dialog.light-on-dark-dialog md-list md-list-item .md-list-item-text h3,
+prm-main-menu[menu-type="full"] md-card .md-headline,
+prm-user-area .user-menu-button .user-name {
+  color: var(--color-secondary-yellow-600);
+}
+prm-main-menu[menu-type="full"] .md-button .md-headline,
+prm-main-menu[menu-type="full"] .overlay-menu-item .md-headline {
+  color: var(--color-secondary-yellow-600) !important;
+}
+.header prm-user-area-expandable .md-button.user-button {
+  color: var(--color-secondary-yellow-600);
+}
+/* change color of magnifying glass in search bar */
+div.search-actions button.md-button.button-confirm,
+div.search-actions button.md-button.button-confirm prm-icon {
+  color: var(--color-secondary-yellow-600) !important;
+}
+.search-actions .md-button.button-confirm:hover:not([disabled]) {
+  background-color: rgba(231, 245, 15, 0.45);
+}
+
+/*bookplate*/
+.bookplate {
+  background-color: var(--color-primary-blue-04);
+  text-align: center;
+  color: var(--color-white);
+  width: 200px;
+  height: 300px;
+  font-family: Didot, serif;
+  border: 3px double white;
+}
+button.bookplateBtn {
+  border: 1px solid var(--color-primary-blue-04);
+}
+.bookplateLink {
+  display: table;
+  padding: 5px;
+  border: 2px solid var(--color-primary-blue-02);
+}
+.bookplateLinkText {
+  display: table-cell;
+  vertical-align: middle;
+  font-weight: bold;
+}
+div.full-view-section {
+  margin-top: 0 !important;
+}
+/*disable new sign in*/
+prm-user-area {
+  /*display:block!important;*/
+}
+prm-user-area-expandable {
+  /*display:none!important;*/
+}
+/*hide rss button on saved searches*/
+div.saved-query-actions svg#rss {
+  display: none;
+}
+/*hide sign-in banner*/
+prm-explore-main .alert-bar {
+  /*display:none;*/
+}
+/* CSS for vpn popup */
+.vpnButton {
+  width: 100%;
+}
+.vpnButton p {
+  text-align: center;
+}
+.vpnButton .md-button {
+  color: white;
+  background: var(--color-secondary-blue-03);
+  overflow-x: hidden !important;
+  white-space: pre-wrap !important;
+}
+/*update css for color contrast */
+prm-search-result-availability-line
+  div.layout-row
+  div.layout-row
+  button.neutralized-button
+  span.button-content
+  span.availability-status.unavailable {
+  color: var(--color-secondary-grey-05) !important;
+}
+prm-virtual-browse-item p span.weak-text {
+  color: var(--color-secondary-grey-05) !important;
+}
+/* change color of check at status*/
+.availability-status.Check.at {
+  color: #0f7d00 !important;
+}
+/* make call number more visible */
+.full-view-container .best-location-sub-location,
+.full-view-container .best-location-delivery {
+  font-weight: bold;
+}
+.full-view-container .md-list-item-text p span.availability-status ~ span {
+  font-weight: bold !important;
+}
+.full-view-container .md-list-item-text p span.availability-status + span {
+  display: none !important;
+}
+.full-view-container
+  prm-location-items
+  .layout-column
+  p
+  span.availability-status
+  + span {
+  display: none !important;
+}
+.full-view-container
+  prm-location-items
+  .layout-column
+  p
+  span.availability-status
+  ~ span {
+  font-weight: bold !important;
+}
+.HTLink {
+  font-weight: bold !important;
+}
+/* make ellipses modal lighter */
+md-dialog.light-on-dark-dialog {
+  background-color: var(--color-primary-blue-05) !important;
+}
+
+/* UC Library Search Logo */
+/* hide the logo on x-small screens */
+.uc-library-search-logo {
+  display: none;
+}
+/* no hover effect */
+.uc-library-search-logo button {
+  background: transparent !important;
+}
+@media (min-width: 970px) {
+  .search-wrapper {
+    margin-left: 20%;
+  }
+  .search-wrapper .flex-lg-10 {
+    display: none;
+  }
+  .search-wrapper .flex-lg-65 {
+    max-width: 80%;
+  }
+  .uc-library-search-logo {
+    display: block;
+    width: 20%;
+    text-align: center;
+    top: 30px;
+    position: absolute;
+  }
+  .uc-library-search-logo button {
+    margin-top: 0;
+  }
+  .uc-library-search-logo img {
+    width: 70%;
+    max-width: 300px;
+  }
+}
+@media (min-width: 1300px) {
+  .uc-library-search-logo {
+    top: 1.5em;
+  }
+}
+/* External search: worldcat */
+/*
+div[data-facet-group="External Search"] h3 {
+  display: none;
+}
+*/
+#external-search .md-chip {
+  margin-bottom: 5px;
+}
+#external-search img {
+  float: left;
+  margin-right: 8px;
+}
+#external-search a {
+  font-weight: bold;
+}
+#external-search span {
+  display: block;
+  color: var(--color-secondary-grey-05);
+}
+/* View Main Menu on the services page / openURL page */
+prm-main-menu.isServicePage {
+  display: block !important;
+}
+.search-result-availability-line-wrapper {
+  min-height: 2.4em;
+  z-index: 1;
+}
+
+.browzine {
+  padding-left: 25px;
+}
+
+prm-logo .logo-image,
+prm-logo img {
+  max-height: 100%;
+  transform: scale(1.3);
+  padding-left: 0px;
+}
+
+/* modal login */
+md-dialog.light-on-dark-dialog {
+  background-color: var(--color-primary-blue-05) !important;
+}
+
+md-dialog.light-on-dark-dialog
+  .md-list[class$="-line"]
+  md-list-item.list-login
+  .md-button,
+md-dialog.light-on-dark-dialog .md-list md-list-item.list-login .md-button,
+md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button,
+md-dialog.light-on-dark-dialog
+  md-list
+  md-list-item.list-login
+  .md-button:hover:not([disabled]),
+md-dialog.light-on-dark-dialog
+  md-list
+  md-list-item.list-login
+  .md-button:focus:not([disabled]) {
+  color: var(--color-white);
+}
+
+.login-dialog md-list md-list-item .md-list-item-text .list-item-title,
+.login-dialog md-list md-list-item .md-list-item-text h3,
+.login-dialog
+  md-list
+  md-list-item
+  > .md-no-style
+  .md-list-item-text
+  .list-item-title,
+.login-dialog md-list md-list-item > .md-no-style .md-list-item-text h3,
+.light-on-dark-dialog .md-button.button-confirm {
+  color: var(--color-white) !important;
+}
+
+md-dialog-content md-input-container:after {
+  background-color: var(--color-secondary-yellow-600);
+}
+
+.light-on-dark-dialog .md-button.button-confirm:hover:not([disabled]),
+.light-on-dark-dialog .md-button.button-confirm:focus:not([disabled]) {
+  color: var(--color-secondary-blue-03) !important;
+}
+
+.light-on-dark-dialog .md-button.button-as-link {
+  color: var(--color-default-cyan-01);
+}
+
+/* stand alone login */
+prm-stand-alone-login ::selection {
+  background-color: var(--color-black);
+}
+
+prm-stand-alone-login div.login-header,
+prm-stand-alone-login md-card.login-dialog {
+  background-color: var(--color-primary-blue-05);
+  color: var(--color-white) !important;
+}
+
+prm-stand-alone-login prm-logo .product-logo .organization-logo:focus,
+prm-stand-alone-login prm-logo .product-logo .organization-logo:hover {
+  box-shadow: none;
+}
+
+prm-stand-alone-login .login-card.login-dialog md-list {
+  padding: 1.5em;
+}
+
+prm-stand-alone-login .login-card md-list-item.login-brighter-dialog .md-button,
+prm-stand-alone-login
+  .login-card
+  md-list-item.login-brighter-dialog
+  .md-button:focus,
+prm-stand-alone-login
+  .login-card
+  md-list-item.login-brighter-dialog
+  .md-button:hover {
+  background-color: var(--color-primary-blue-05) !important;
+}
+
+prm-stand-alone-login p,
+prm-stand-alone-login prm-login [external-link],
+prm-stand-alone-login md-input-container label:not(.md-no-float),
+prm-stand-alone-login md-input-container input,
+prm-stand-alone-login prm-icon md-icon.md-primoExplore-theme {
+  color: var(--color-white) !important;
+}
+
+prm-stand-alone-login
+  md-input-container:not(.md-input-has-value):not(.md-input-has-placeholder)
+  input:not(:focus),
+prm-stand-alone-login
+  md-input-container:not(.md-input-has-value):not(.md-input-has-placeholder)
+  input:not(:hover) {
+  border-color: hsla(0, 0%, 100%, 0.5);
+}
+
+prm-stand-alone-login prm-login-help .md-button.button-as-link {
+  color: var(--color-default-cyan-01);
+}
+
+prm-stand-alone-login prm-login .md-button.button-confirm {
+  color: var(--color-secondary-yellow-600);
+}
+
+prm-stand-alone-login prm-login .md-button.button-confirm:focus:not([disabled]),
+prm-stand-alone-login prm-login .md-button.button-confirm:hover:not([disabled]),
+prm-stand-alone-login .md-button.button-as-link:focus:not([disabled]),
+prm-stand-alone-login .md-button.button-as-link:hover:not([disabled]),
+prm-stand-alone-login .md-button:hover:not([disabled]) {
+  background-color: var(--color-white);
+  color: var(--color-secondary-blue-03);
+}
+
+prm-stand-alone-login
+  prm-login
+  form
+  > div
+  .md-button:hover:not([disabled])
+  md-icon.md-primoExplore-theme {
+  color: var(--color-secondary-blue-03) !important;
+}
+.login-dialog
+  md-list
+  md-list-item
+  .md-list-item-text
+  h3[translate="parallel.login.link1"],
+.login-dialog
+  md-list
+  md-list-item
+  .md-list-item-text
+  h3[translate="parallel.login.link2"] {
+  color: var(--color-secondary-yellow-600) !important;
+}
+
+prm-stand-alone-login prm-icon md-icon svg {
+  color: var(--color-white) !important;
+}
+
+prm-stand-alone-login .layout-fill.layout-align-start-center.layout-column {
+  background-color: var(--color-primary-blue-05);
+}
+
+prm-stand-alone-login .layout-full-width.ng-pristine.ng-valid.layout-column {
+  border: 2px solid var(--color-white);
+  border-radius: 4px;
+  margin-bottom: 50vh;
+}
+prm-stand-alone-login
+  h2.md-headline.light-text.layout-align-center-center.layout-row.flex {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--color-white);
+}
+
+prm-stand-alone-login div.layout-align-center-center.layout-row {
+  margin-top: 36px !important;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+prm-stand-alone-login h3.list-item-title.md-display-3 {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 26px !important;
+  font-weight: 500 !important;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+prm-stand-alone-login p {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--color-white);
+}
+
+prm-stand-alone-login md-list-item {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+prm-stand-alone-login md-list.padded-container.md-primoExplore-theme {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+}
+
+prm-stand-alone-login md-dialog-actions.layout-align-center-center.layout-row {
+  min-height: 36px;
+}
+
+.login-dialog h2.md-headline {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 1.6;
+  color: var(--color-white);
+}
+.login-dialog {
+  max-width: 360px;
+}
+.login-dialog div.layout-align-center-center.layout-row {
+  margin-top: 46px !important;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.login-dialog h3.list-item-title.md-display-3 {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 26px !important;
+  font-weight: 500 !important;
+  line-height: 1.2;
+  color: var(--color-white);
+}
+
+.login-dialog p {
+  font-family: Karbon, Helvetica, Arial, sans-serif;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--color-white);
+}
+
+prm-login-help a {
+  color: var(--color-white) !important;
+}
+
+/* sidebar in detail results */
+prm-full-view .services-index-under .md-button {
+  max-width: 180px;
+}
+prm-full-view .services-index-under #services-index {
+  max-width: 180px;
+}
+.full-view-section {
+  padding-left: 4em;
+}
+
+/* remove icons and animations from My Library Card */
+prm-icon.giant-icon md-icon {
+  display: none;
+}
+md-tab-content {
+  transition: unset !important;
+}
+md-ink-bar {
+  transition: unset !important;
+}
+
+/* fix overlapping text in main search bar */
+md-autocomplete-parent-scope {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* increase width of item request form */
+#tab-content-40 .layout-align-start-stretch,
+#form_field_pickupLocation .underlined-input,
+#form_field_termsOfUse .underlined-input,
+#form_field_comment .underlined-input,
+md-input-container .md-input,
+.md-datepicker-input {
+  width: 100%;
+}
+.md-datepicker-input {
+  max-width: 500px;
+}
+.md-datepicker-input-container {
+  width: 100%;
+  margin-left: -34px !important;
+}
+._md-datepicker-floating-label._md-datepicker-has-calendar-icon
+  md-datepicker
+  .md-datepicker-button {
+  left: -34px;
+}
+
+/* increase spacing in item detail lists */
+.word-break.layout-column[role="listitem"] {
+  margin-top: 4px;
+}
+.flex-gt-xs-25.flex-gt-sm-20.flex {
+  margin-top: 4px;
+}
+
+/* Hide "search inside" for physical-only journals */
+.button-right-align.search-within-p-only {
+  display: none;
+}
+#searchWithinJournal.search-within-p-only {
+  display: none;
+}
+
+#speedDialWidget.page-nav {
+  bottom: 80px !important;
+}
