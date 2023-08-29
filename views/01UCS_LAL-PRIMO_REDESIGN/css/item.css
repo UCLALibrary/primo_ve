@@ -100,9 +100,11 @@ div.full-view-section {
 }
 
 /* redesign colors and fonts */
+
+/* background color = white */
 prm-full-view .full-view-inner-container,
-.full-view-spacer,
-prm-full-view-cont md-content {
+prm-full-view-cont md-content,
+primo-explore #full-view-container {
   background-color: var(--color-white) !important;
 }
 
@@ -110,13 +112,15 @@ prm-full-view-cont md-content {
   color: var(--status-success-02);
 }
 
-/* metadata labels */
+/* metadata labels: U/Body/Overline */
 #item-details .bold-text {
   font-family: "Karbon";
   font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
 }
+
+/* metadata values: U/Body/Caption */
 
 .full-view-section .section-title {
   font-family: "Karbon";
