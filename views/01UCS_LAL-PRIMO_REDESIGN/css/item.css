@@ -121,10 +121,26 @@ primo-explore #full-view-container {
 }
 
 /* metadata values: U/Body/Caption */
-
 .full-view-section .section-title {
   font-family: "Karbon";
   font-weight: 600;
   line-height: 100%;
   font-size: 36px;
+}
+
+/* Main title: U/Max/Heading/Step1 */
+prm-brief-result .item-title span {
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* Item sidebar links: /* U/Body/Link */
+.services-index-under button {
+  font-family: "Proxima Nova", "sans-serif";
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--color-primary-blue-04) !important;
 }
