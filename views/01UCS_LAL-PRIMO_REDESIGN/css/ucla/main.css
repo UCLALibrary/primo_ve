@@ -1,0 +1,216 @@
+/* main.css 
+*  Contains everything which applies to all pages, or the 
+*  top level of the application.
+*/
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #0f0f0f;
+  --color-primary-yellow-01: #ffe800;
+  --color-primary-blue-01: #eaf2fb;
+  --color-primary-blue-02: #9ecffa;
+  --color-primary-blue-03: #0b6ab7;
+  --color-primary-blue-04: #0055a6;
+  --color-primary-blue-05: #032d5b;
+  --color-secondary-yellow-01: #ffe92e;
+  --color-secondary-yellow-02: #ffdb20;
+  --color-secondary-yellow-03: #ffd600;
+  --color-secondary-blue-01: #288fe8;
+  --color-secondary-blue-02: #1678d0;
+  --color-secondary-blue-03: #1f75c5;
+  --color-secondary-grey-01: #f2f2f2;
+  --color-secondary-grey-02: #dcdcdb;
+  --color-secondary-grey-03: #999999;
+  --color-secondary-grey-04: #717171;
+  --color-secondary-grey-05: #434343;
+  --color-default-cyan-01: #c7f8ff;
+  --color-help-green-01: #b9f8ee;
+  --color-visit-fushia-01: #ffdcff;
+  --color-about-purple-01: #efe5ff;
+  --color-default-cyan-02: #5cd9ff;
+  --color-help-green-02: #87fbe8;
+  --color-visit-fushia-02: #ffbdf4;
+  --color-about-purple-02: #e7dbff;
+  --color-default-cyan-03: #0aa5ff;
+  --color-help-green-03: #00e0e0;
+  --color-visit-fushia-03: #ff94db;
+  --color-about-purple-03: #c099ff;
+  --status-error-02: #b3070d;
+}
+
+@font-face {
+  font-family: "Karbon";
+  src: url("karbon-web-medium.woff") format("woff");
+}
+
+/*Top Banner Background Color */
+.prm-primary-bg.prm-hue1,
+prm-spinner.prm-hue1.overlay-cover.light-on-dark:after,
+prm-topbar .top-nav-bar,
+prm-search-bar.prm-hue1 {
+  background-color: var(--color-white);
+}
+
+/*!!!!!!!  TOPBAR - USER AREA - HOVER COLOR !!!!!!!!*/
+md-fab-toolbar md-toolbar {
+  background-color: var(--color-primary-blue-04) !important;
+  pointer-events: none;
+  z-index: 23;
+}
+/*Search Bar Wrapper color */
+prm-search-bar,
+prm-atoz-search-bar,
+prm-journals-search-bar,
+prm-browse-search-bar,
+prm-tags-search-bar,
+.prm-primary-bg,
+prm-collection-gallery-header .collection-header-inner,
+prm-newspapers-search-bar,
+prm-spinner.overlay-cover.light-on-dark:after {
+  background-color: var(--color-primary-blue-03);
+}
+/*Remove blue line underneath image on hover */
+prm-logo .product-logo a:hover {
+  background-color: transparent;
+  text-transform: none;
+  box-shadow: none;
+}
+/*Hide library in the brief and full displays since Locations also contain the library name */
+span.best-location-library-code.locations-link {
+  display: none;
+}
+
+span[translate="nui.request.request"] {
+  display: none;
+}
+
+/* Body of most (all?) pages should be white */
+body {
+  background-color: var(--color-white);
+}
+
+/*match UCSC font*/
+body .header {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*Hide 'Expand My Results' checkbox
+  md-checkbox[aria-label="Expand My Results"]{
+  display: none;
+  }
+  */
+/*Increase the width of the element that includes location and call number */
+div.flex-xs-100.flex {
+  min-width: fit-content;
+}
+/*Change sign-in, and ellipses link colors */
+md-dialog.light-on-dark-dialog
+  md-list
+  md-list-item
+  .md-list-item-text
+  .list-item-title,
+md-dialog.light-on-dark-dialog md-list md-list-item .md-list-item-text h3,
+prm-main-menu[menu-type="full"] md-card .md-headline,
+prm-user-area .user-menu-button .user-name {
+  color: var(--color-secondary-yellow-600);
+}
+prm-main-menu[menu-type="full"] .md-button .md-headline,
+prm-main-menu[menu-type="full"] .overlay-menu-item .md-headline {
+  color: var(--color-secondary-yellow-600) !important;
+}
+.header prm-user-area-expandable .md-button.user-button {
+  color: var(--color-secondary-yellow-600);
+}
+/* change color of magnifying glass in search bar */
+div.search-actions button.md-button.button-confirm,
+div.search-actions button.md-button.button-confirm prm-icon {
+  color: var(--color-secondary-yellow-600) !important;
+}
+.search-actions .md-button.button-confirm:hover:not([disabled]) {
+  background-color: rgba(231, 245, 15, 0.45);
+}
+
+/* CSS for vpn popup */
+.vpnButton {
+  width: 100%;
+}
+.vpnButton p {
+  text-align: center;
+}
+.vpnButton .md-button {
+  color: white;
+  background: var(--color-secondary-blue-03);
+  overflow-x: hidden !important;
+  white-space: pre-wrap !important;
+}
+
+/* make ellipses modal lighter */
+md-dialog.light-on-dark-dialog {
+  background-color: var(--color-primary-blue-05) !important;
+}
+
+/* UC Library Search Logo */
+/* hide the logo on x-small screens */
+.uc-library-search-logo {
+  display: none;
+}
+/* no hover effect */
+.uc-library-search-logo button {
+  background: transparent !important;
+}
+@media (min-width: 970px) {
+  .search-wrapper {
+    margin-left: 20%;
+  }
+  .search-wrapper .flex-lg-10 {
+    display: none;
+  }
+  .search-wrapper .flex-lg-65 {
+    max-width: 80%;
+  }
+  .uc-library-search-logo {
+    display: block;
+    width: 20%;
+    text-align: center;
+    top: 30px;
+    position: absolute;
+  }
+  .uc-library-search-logo button {
+    margin-top: 0;
+  }
+  .uc-library-search-logo img {
+    width: 70%;
+    max-width: 300px;
+  }
+}
+@media (min-width: 1300px) {
+  .uc-library-search-logo {
+    top: 1.5em;
+  }
+}
+
+/* View Main Menu on the services page / openURL page */
+prm-main-menu.isServicePage {
+  display: block !important;
+}
+.search-result-availability-line-wrapper {
+  min-height: 2.4em;
+  z-index: 1;
+}
+
+.browzine {
+  padding-left: 25px;
+}
+
+prm-logo .logo-image,
+prm-logo img {
+  max-height: 100%;
+  transform: scale(1.3);
+  padding-left: 0px;
+}
+
+/* fix overlapping text in main search bar */
+md-autocomplete-parent-scope {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
