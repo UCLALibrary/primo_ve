@@ -164,3 +164,49 @@ prm-snippet {
   line-height: 160%;
   letter-spacing: 0.16px;
 }
+
+/* Search Results: Facet Refine Your Search: U/Min/Heading/Step6 */
+h2.sidebar-title {
+  /* Can't do this in white yet, unless background here is blue */
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+/* Search Results: Facet header: U/Min/Heading/Step4 */
+span.section-title-header {
+  color: var(--color-primary-blue-05);
+  font-family: Karbon;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+/* Search Results: Facet title, and Show More: U/Body/Paragraph */
+span.text-number-space,
+div.expand-section-button {
+  /* Design has this as #000, looks the same to me... */
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+}
+
+/* Search Results: Facet count */
+span.facet-counter {
+  /* Design has this as #000, looks the same to me... */
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+}
