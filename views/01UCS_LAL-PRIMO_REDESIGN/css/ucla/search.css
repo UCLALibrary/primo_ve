@@ -210,3 +210,35 @@ span.facet-counter {
   line-height: 160%;
   letter-spacing: 0.2px;
 }
+
+/* Search Results: "Sort By": U/Body/Button */
+h3.section-title-header {
+  color: var(--color-primary-blue-05);
+  /* Fall back to generic sans-serif until Proxima Nova issue is resolved */
+  font-family: Proxima Nova, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+/* Saved Records: Most styles from Search Results apply automatically;
+*  the following are exceptions / differences.
+*/
+
+/* Saved Records: change background to white, which isn't happening via <body> */
+prm-favorites div.layout-row {
+  background-color: var(--color-white);
+}
+
+/* Saved Records: Labels, treated same as Facet Titles: U/Body/Paragraph */
+div.md-chip-content {
+  /* Design has this as #000, looks the same to me... */
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+}
