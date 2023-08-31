@@ -59,3 +59,60 @@ prm-full-view .services-index-under #services-index {
 #speedDialWidget.page-nav {
   bottom: 80px !important;
 }
+
+/* Search Results: Title: U/Max/Heading/Step1 */
+prm-brief-result h3.item-title {
+  color: var(--primary-blue-04, #0055a6);
+  font-family: Karbon;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 31.2px */
+}
+
+/* Search Results: Non-Title bib info: U/Body/Caption */
+span [data-field-selector] {
+  color: var(--black, #0f0f0f);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: Proxima Nova;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+  letter-spacing: 0.16px;
+}
+
+/* Search Results: Call number (location): U/Body/Overline */
+prm-search-result-availability-line span.best-location-sub-location {
+  color: var(--black, #0f0f0f);
+  font-family: Karbon;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+/* Search Results: Call number: U/Body/Caption */
+prm-search-result-availability-line span.best-location-delivery {
+  color: var(--black, #0f0f0f);
+  font-family: Proxima Nova;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.16px;
+}
+
+/* Search Results: Status unavailable: U/Body/Paragraph */
+span.availability-status.unavailable {
+  color: var(--status-error-02, #b3070d) !important;
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 32px */
+  letter-spacing: 0.2px;
+}
