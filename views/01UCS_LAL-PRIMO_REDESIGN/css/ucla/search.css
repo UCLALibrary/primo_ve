@@ -3,8 +3,7 @@ prm-search-result-availability-line
   div.layout-row
   div.layout-row
   button.neutralized-button
-  span.button-content
-  span.availability-status.unavailable {
+  span.button-content {
   color: var(--color-secondary-grey-05) !important;
 }
 
@@ -58,4 +57,156 @@ prm-full-view .services-index-under #services-index {
 /* "next page" button on browse results */
 #speedDialWidget.page-nav {
   bottom: 80px !important;
+}
+
+/* Search Results: change background to white, which isn't happening via <body> */
+prm-search div.layout-row {
+  background-color: var(--color-white);
+}
+
+/* Search Results: toolbar must be forced to white, else grey creeps through parts of it */
+md-toolbar {
+  background-color: var(--color-white) !important;
+}
+
+/* Search Results: Title: U/Max/Heading/Step1 */
+prm-brief-result h3.item-title {
+  color: var(--color-primary-blue-04);
+  font-family: Karbon;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 31.2px */
+}
+
+/* Search Results: Non-Title bib info: U/Body/Caption */
+span [data-field-selector] {
+  color: var(--color-black);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Fall back to generic sans-serif until Proxima Nova issue is resolved */
+  font-family: Proxima Nova, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+  letter-spacing: 0.16px;
+}
+
+/* Search Results: Location and call number: U/Body/Paragraph 
+   Using availability styling instead of call number, 
+   due to design questions & issues moving / changing these elements.
+*/
+prm-search-result-availability-line span.best-location-sub-location,
+prm-search-result-availability-line span.best-location-delivery {
+  color: var(--color-primary-blue-03);
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+  text-decoration-line: underline;
+}
+
+/* Search Results: Status available in library: U/Body/Paragraph */
+span.availability-status.available_in_library {
+  overflow: hidden;
+  color: var(--status-success-02);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+}
+
+/* Search Results: Status unavailable: U/Body/Paragraph */
+span.availability-status.unavailable {
+  color: var(--status-error-02) !important;
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+}
+
+/* Search Results: Status available online: U/Body/Paragraph */
+span.availability-status.not_restricted,
+span.availability-status.fulltext {
+  color: var(--color-primary-blue-03);
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+  text-decoration-line: underline;
+}
+
+/* Search Results: Article snippet: U/Body/Caption */
+/* These look terrible here:
+    text-overflow: ellipsis;
+    white-space: nowrap;
+ */
+prm-snippet {
+  overflow: hidden;
+  color: var(--color-black);
+  /* Fall back to generic sans-serif until Proxima Nova issue is resolved */
+  font-family: Proxima Nova, sans-serif;
+  font-size: 16px;
+  /* In-line style forces this to italic, despite the below */
+  font-style: normal !important;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.16px;
+}
+
+/* Search Results: Facet Refine Your Search: U/Min/Heading/Step6 */
+h2.sidebar-title {
+  /* Can't do this in white yet, unless background here is blue */
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+/* Search Results: Facet header: U/Min/Heading/Step4 */
+span.section-title-header {
+  color: var(--color-primary-blue-05);
+  font-family: Karbon;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+/* Search Results: Facet title, and Show More: U/Body/Paragraph */
+span.text-number-space,
+div.expand-section-button {
+  /* Design has this as #000, looks the same to me... */
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+}
+
+/* Search Results: Facet count */
+span.facet-counter {
+  /* Design has this as #000, looks the same to me... */
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
 }
