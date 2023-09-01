@@ -3,3 +3,5 @@
 @import "ucla/account.css";
 @import "ucla/item.css";
 @import "ucla/search.css";
+/* typekit link to use Proxima Nova (Adobe font) */
+@import url("https://use.typekit.net/xso3wzv.css");
