@@ -98,3 +98,49 @@ div.full-view-section {
 .full-view-section {
   padding-left: 4em;
 }
+
+/* redesign colors and fonts */
+
+/* background color = white */
+prm-full-view .full-view-inner-container,
+prm-full-view-cont md-content,
+primo-explore #full-view-container {
+  background-color: var(--color-white) !important;
+}
+
+.availability-status.available_in_library {
+  color: var(--status-success-02);
+}
+
+/* metadata labels: U/Body/Overline */
+#item-details .bold-text {
+  font-family: "Karbon";
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* metadata values: U/Body/Caption */
+.full-view-section .section-title {
+  font-family: "Karbon";
+  font-weight: 600;
+  line-height: 100%;
+  font-size: 36px;
+}
+
+/* Main title: U/Max/Heading/Step1 */
+prm-brief-result .item-title span {
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* Item sidebar links: /* U/Body/Link */
+.services-index-under button {
+  font-family: "Proxima Nova", "sans-serif";
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--color-primary-blue-04) !important;
+}
