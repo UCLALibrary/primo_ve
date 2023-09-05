@@ -98,3 +98,139 @@ div.full-view-section {
 .full-view-section {
   padding-left: 4em;
 }
+
+/* redesign colors and fonts */
+
+/* background color = white */
+prm-full-view .full-view-inner-container,
+prm-full-view-cont md-content,
+primo-explore #full-view-container,
+prm-full-view-cont .padded-container {
+  background-color: var(--color-white) !important;
+}
+
+/* Back to search results: U/Body/Link */
+prm-full-view-cont .back-button {
+  font-family: proxima-nova;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: none;
+  color: var(--color-primary-blue-04);
+}
+
+/* availability status: U/Body/Overline */
+prm-full-view span.availability-status {
+  font-family: Karbon;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 160%;
+  letter-spacing: 1.6px !important;
+  text-transform: uppercase;
+}
+
+/* Metadata labels in Details section: U/Body/Overline */
+#item-details .bold-text {
+  font-family: Karbon;
+  font-weight: 700 !important;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 160%;
+  letter-spacing: 1.6px;
+  color: var(--color-black);
+}
+
+/* Metadata values in Details section: U/Body/Caption */
+#item-details {
+  font-family: proxima-nova;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-black);
+  line-height: 160%;
+  letter-spacing: 0.16px;
+}
+
+/* Links within metadata values */
+#item-details a {
+  color: var(--color-primary-blue-04);
+}
+
+/* Section headers (e.g. Details): U/Min/Heading/Step5 */
+.full-view-section .section-title {
+  font-family: Karbon;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 120%;
+  color: var(--color-primary-blue-05);
+}
+
+/* Main title: U/Max/Heading/Step1 */
+prm-full-view .item-title span {
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+/* Item sidebar links: /* U/Body/Link */
+.services-index-under button {
+  font-family: proxima-nova;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 120%;
+  color: var(--color-primary-blue-04) !important;
+}
+
+/* Item content type (e.g. Journal, Book): U/Body/Caption,
+with additional background box */
+prm-full-view .media-content-type span {
+  font-family: proxima-nova;
+  font-size: 16px;
+  text-transform: none;
+  font-weight: 400;
+  color: var(--secondary-grey-05);
+  border-radius: 5px;
+  background: var(--color-primary-blue-01);
+  padding: 4px 43px;
+}
+
+/* Links in Links section: no style name given */
+prm-service-links {
+  font-family: proxima-nova;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  color: var(--color-primary-blue-03);
+}
+
+/* Sign in to request banner: U/Body/Paragraph */
+prm-request-services prm-alert-bar {
+  font-family: Karbon;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+  border: 1.5px solid var(--color-primary-blue-02);
+  border-radius: 0px;
+}
+prm-request-services prm-alert-bar .bar {
+  background: var(--color-white) !important;
+  border: none;
+}
+
+/* Sign in button on banner: U/Body/Button */
+prm-request-services prm-alert-bar prm-authentication button {
+  background: var(--color-primary-blue-03) !important;
+  color: var(--color-white) !important;
+  font-family: proxima-nova !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 120% !important;
+}
+
+/* "Location Items" section ("Requests" in mockup) */
+prm-location-items {
+  background: var(--color-primary-blue-01);
+}
