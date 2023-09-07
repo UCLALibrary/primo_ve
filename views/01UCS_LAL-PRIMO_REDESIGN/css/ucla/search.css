@@ -84,8 +84,7 @@ span [data-field-selector] {
   color: var(--color-black);
   overflow: hidden;
   text-overflow: ellipsis;
-  /* Fall back to generic sans-serif until Proxima Nova issue is resolved */
-  font-family: proxima-nova, sans-serif;
+  font-family: proxima-nova;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -155,8 +154,7 @@ span.availability-status.fulltext {
 prm-snippet {
   overflow: hidden;
   color: var(--color-black);
-  /* Fall back to generic sans-serif until Proxima Nova issue is resolved */
-  font-family: Proxima Nova, sans-serif;
+  font-family: proxima-nova;
   font-size: 16px;
   /* In-line style forces this to italic, despite the below */
   font-style: normal !important;
@@ -214,8 +212,7 @@ span.facet-counter {
 /* Search Results: "Sort By": U/Body/Button */
 h3.section-title-header {
   color: var(--color-primary-blue-05);
-  /* Fall back to generic sans-serif until Proxima Nova issue is resolved */
-  font-family: Proxima Nova, sans-serif;
+  font-family: proxima-nova;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -241,4 +238,64 @@ div.md-chip-content {
   font-weight: 600;
   line-height: 160%;
   letter-spacing: 0.2px;
+}
+
+/* Advanced Search
+*/
+
+/* Advanced Search: change background to white, which isn't happening via <body> */
+div.advanced-search-backdrop,
+div.advanced-search-output md-card {
+  background-color: var(--color-white);
+}
+
+/* Advanced Search: Tabs at top of form: U/Body/Caption */
+md-tab-item.md-tab {
+  color: var(--color-secondary-grey-05);
+  font-family: proxima-nova;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+}
+
+/* Advanced Search: Search for, Search filters (names/labels): U/Body/Paragraph */
+span#searchFieldsGroupAdvancedSearch,
+legend[translate="nui.search-advanced.searchFilters"],
+md-input-container.md-input-has-value {
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+  /* Override scaling from prm-advanced-search legend */
+  transform: scale(1);
+}
+
+/* Advanced Search: Scopes, Search filters (values) : U/Body/Caption */
+div.md-label,
+md-select-value.md-select-value {
+  color: var(--color-black);
+  font-family: proxima-nova;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.16px;
+}
+
+/* Advanced Search: Search term text placeholder: U/Body/Caption */
+md-input-container.md-input-has-placeholder input[placeholder] {
+  /* Not found in design tokens */
+  color: var(--library-palette-child-brand-digital-charcoal, #434343);
+  font-family: proxima-nova;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.16px;
 }
