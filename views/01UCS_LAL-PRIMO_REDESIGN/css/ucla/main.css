@@ -40,8 +40,34 @@
 }
 
 @font-face {
-  font-family: "Karbon";
+  font-family: Karbon;
+  src: url("karbon-web-light.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: Karbon;
+  src: url("karbon-web-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Karbon;
   src: url("karbon-web-medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: Karbon;
+  src: url("karbon-web-semibold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: Karbon;
+  src: url("karbon-web-bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
 }
 
 /*Top Banner Background Color */
