@@ -299,3 +299,46 @@ md-input-container.md-input-has-placeholder input[placeholder] {
   line-height: 160%;
   letter-spacing: 0.16px;
 }
+
+/* Journal Search: Label before search box: No design */
+prm-atoz-search-bar .classic-input .search-scope {
+  background-color: var(--color-white);
+}
+
+/* Journal Search: Label before search box: text seems to need to target the span */
+span[translate="nui.journalsearch.title"] {
+  color: var(--color-black);
+  font-family: proxima-nova;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.16px;
+}
+
+/* Journal Search: Category sidebar: No design */
+div.databases-categories,
+div.sticking-wrapper {
+  background-color: var(--color-white);
+}
+
+/* Journal Search: Category heading: U/Min/Heading/Step4 */
+h2[translate="nui.journalsearch.category.title"] {
+  color: var(--color-primary-blue-05);
+  font-family: Karbon;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+/* Journal Search: Categories and sub-categories: U/Body/Paragraph */
+prm-tree-nav md-list-item p {
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+}
