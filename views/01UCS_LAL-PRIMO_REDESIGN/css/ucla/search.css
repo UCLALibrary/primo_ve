@@ -316,6 +316,20 @@ span[translate="nui.journalsearch.title"] {
   letter-spacing: 0.16px;
 }
 
+/* Journal Search: Title or ISSN placeholder text: No design,
+   match Advanced Search placeholder: U/Body/Caption
+*/
+md-autocomplete[md-input-id="searchBarJournal"] {
+  /* Not found in design tokens */
+  color: var(--library-palette-child-brand-digital-charcoal, #434343);
+  font-family: proxima-nova;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.16px;
+}
+
 /* Journal Search: Category sidebar: No design */
 div.databases-categories,
 div.sticking-wrapper {
@@ -341,4 +355,21 @@ prm-tree-nav md-list-item p {
   font-weight: 600;
   line-height: 160%;
   letter-spacing: 0.2px;
+}
+
+/* Browse Search: Label before search box: No design */
+prm-browse-search-bar .classic-input .search-scope {
+  background-color: var(--color-white);
+}
+
+/* Browse Search: Hide "Browse by" label, which seems out of place and
+   has hard-coded "bold-text" class */
+prm-browse-search-bar label[translate="nui.browse.browseby"] {
+  display: none;
+}
+
+/* Browse Search: change background to white, which isn't happening via <body> */
+/* This does not change the results list, which is grey / white when hovered. */
+prm-browse-search md-content {
+  background-color: var(--color-white) !important;
 }
