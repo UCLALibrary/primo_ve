@@ -234,3 +234,63 @@ prm-request-services prm-alert-bar prm-authentication button {
 prm-location-items {
   background: var(--color-primary-blue-01);
 }
+
+/* Online access links background */
+prm-alma-viewit-items md-list-item div {
+  background: var(--color-primary-blue-01);
+}
+
+/* Online access titles: U/Min/Heading/Step1 */
+prm-alma-viewit-items md-list-item .item-title {
+  font-family: Karbon;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--color-black);
+}
+
+/* Online access body text: U/Body/Caption */
+prm-alma-viewit-items md-list-item {
+  font-family: proxima-nova;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.16px;
+}
+
+/* Other UC Libraries: U/Min/Heading/Step5 */
+#alma_other_members [translate="nui.brief.results.tabs.getit_other"] {
+  font-family: Karbon;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--color-primary-blue-05);
+  text-transform: none;
+}
+
+/* Item locations (collapsed) */
+prm-location {
+  background: var(--color-primary-blue-01);
+}
+
+/* Item location name (collapsed and expanded): U/Max/Heading/Step1 */
+prm-location-items [ng-if="$ctrl.currLoc.location.availabilityStatus"],
+prm-location h3 {
+  font-family: Karbon;
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  line-height: 120% !important;
+}
+
+/* Item location details (collapsed and expanded): U/Body/Caption */
+prm-location p,
+prm-location-items [ng-if="$ctrl.currLoc.location.availabilityStatement"],
+prm-location-items md-list-item {
+  font-family: proxima-nova;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 160% !important;
+  letter-spacing: 0.16px !important;
+  font-weight: normal !important;
+}
