@@ -68,7 +68,55 @@ md-list-item p.text-headings {
   font-size: 20px !important;
 }
 
-/* First column of fine information (labels) */
+/* Account > Fines + Fees: U/Max/Heading/Step3 */
+prm-fines div.header-title {
+  color: var(--secondary-grey-05, #434343);
+  font-family: Karbon;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 48px */
+}
+
+/* Account > Fines + Fees: Sort dropdown: U/Body/Link */
+prm-fines div.tab-header-actions md-input-container label.md-container-ignore {
+  color: var(--secondary-grey-04, #717171);
+  font-family: Proxima Nova;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+}
+
+/* Account > Fines + Fees: Total amount header */
+prm-fines div.header-subtitle > span > em:first-child {
+  color: var(--primary-blue-03, #0b6ab7);
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 32px */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Account > Fines + Fees: item amount : U/Max/Heading/Step1  */
+prm-fines
+  md-list
+  md-list-item
+  div.md-list-item-text
+  div.weak-text
+  > p.bold-text
+  > span:first-child {
+  color: var(--primary-blue-03, #0b6ab7);
+  font-family: Karbon;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 31.2px */
+}
+
+/* Account > Fines + Fees: labels: U/Body/Overline */
 prm-fines
   md-list
   md-list-item
@@ -76,13 +124,17 @@ prm-fines
   .weak-text
   > p
   > span:first-child {
-  text-transform: uppercase;
+  color: var(--black, #0f0f0f);
   font-family: Karbon;
-  font-weight: 700;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
 }
 
-/* Second column of fine information (the data) */
+/* Account > Fines + Fees: data: U/Body/Overline  */
 prm-fines
   md-list
   md-list-item
@@ -90,7 +142,11 @@ prm-fines
   .weak-text
   > p
   > span:nth-child(2) {
+  color: var(--black, #0f0f0f);
   font-family: Karbon;
-  font-weight: 600;
   font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 32px */
+  letter-spacing: 0.2px;
 }
