@@ -69,8 +69,8 @@ md-list-item p.text-headings {
 }
 
 /* Account > Fines + Fees: U/Max/Heading/Step3 */
-prm-fines div.header-title {
-  color: var(--secondary-grey-05, #434343);
+prm-fines div.header-title h2 {
+  color: var(--color-secondary-grey-05);
   font-family: Karbon;
   font-size: 40px;
   font-style: normal;
@@ -79,23 +79,48 @@ prm-fines div.header-title {
 }
 
 /* Account > Fines + Fees: Sort dropdown: U/Body/Link */
-prm-fines div.tab-header-actions md-input-container label.md-container-ignore {
-  color: var(--secondary-grey-04, #717171);
-  font-family: Proxima Nova;
+prm-fines
+  div.tab-header-actions
+  md-input-container
+  label.md-container-ignore
+  > span {
+  color: var(--color-secondary-grey-04);
+  font-family: proxima-nova;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 24px */
+  line-height: 120%;
+}
+
+/* Account > Fines + Fees: Fine category: U/Max/Heading/Step1  */
+prm-fines md-list md-list-item h3 > span {
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+/* Account > Fines + Fees: Fine item: U/Body/Paragraph */
+prm-fines md-list md-list-item h4 > span {
+  color: var(--color-black);
+  font-family: Karbon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
 }
 
 /* Account > Fines + Fees: Total amount header */
 prm-fines div.header-subtitle > span > em:first-child {
-  color: var(--primary-blue-03, #0b6ab7);
+  color: var(--color-primary-blue-03);
   font-family: Karbon;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 160%; /* 32px */
+  line-height: 160%;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -108,12 +133,12 @@ prm-fines
   div.weak-text
   > p.bold-text
   > span:first-child {
-  color: var(--primary-blue-03, #0b6ab7);
+  color: var(--color-primary-blue-03);
   font-family: Karbon;
   font-size: 26px;
   font-style: normal;
   font-weight: 700;
-  line-height: 120%; /* 31.2px */
+  line-height: 120%;
 }
 
 /* Account > Fines + Fees: labels: U/Body/Overline */
@@ -124,7 +149,7 @@ prm-fines
   .weak-text
   > p
   > span:first-child {
-  color: var(--black, #0f0f0f);
+  color: var(--color-black);
   font-family: Karbon;
   font-size: 16px;
   font-style: normal;
@@ -142,11 +167,11 @@ prm-fines
   .weak-text
   > p
   > span:nth-child(2) {
-  color: var(--black, #0f0f0f);
+  color: var(--color-black);
   font-family: Karbon;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 160%; /* 32px */
+  line-height: 160%;
   letter-spacing: 0.2px;
 }
