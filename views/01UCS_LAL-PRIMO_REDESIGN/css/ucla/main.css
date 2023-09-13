@@ -44,12 +44,57 @@
   src: url("karbon-web-medium.woff") format("woff");
 }
 
-/*Top Banner Background Color */
+/* Top Banner Background Color */
 .prm-primary-bg.prm-hue1,
 prm-spinner.prm-hue1.overlay-cover.light-on-dark:after,
 prm-topbar .top-nav-bar,
 prm-search-bar.prm-hue1 {
   background-color: var(--color-white);
+}
+
+/* Top Banner: Menu item box */
+div.top-nav-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  color: var(--color-black) !important;
+}
+
+/* Top Banner: Menu item text and "more links (...)": U/Body/Overline */
+div[data-main-menu-item] a.button-over-dark span.item-content,
+button#more-links-button span.item-content {
+  color: var(--color-black);
+  text-align: center;
+  font-family: Karbon;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+/* Top Banner: My Library Account, and Menu (heading and options): U/Body/Link */
+/* TODO: Change Alma config, currently MY LIBRARY ACCOUNT, to My Library Account;
+    otherwise, javascript may be needed since CSS can't do Sentence Case.
+*/
+button.sign-in-btn-ctm,
+button.button-with-menu-arrow,
+md-menu-item .md-button {
+  color: var(--color-black) !important;
+  text-align: center;
+  font-family: proxima-nova;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+/* Top Banner: QR and Favorites icons */
+/* Doesn't match design, problems with hover, but at least they're visible... */
+prm-search-bookmark-filter md-icon svg {
+  color: var(--color-black) !important;
+  fill: var(--color-black);
 }
 
 /*!!!!!!!  TOPBAR - USER AREA - HOVER COLOR !!!!!!!!*/
