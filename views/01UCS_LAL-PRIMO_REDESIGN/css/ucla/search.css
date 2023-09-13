@@ -75,7 +75,7 @@ prm-brief-result h3.item-title {
   font-family: Karbon;
   font-size: 26px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 120%; /* 31.2px */
 }
 
@@ -102,7 +102,7 @@ prm-search-result-availability-line span.best-location-delivery {
   font-family: Karbon;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.2px;
   text-decoration-line: underline;
@@ -117,7 +117,7 @@ span.availability-status.available_in_library {
   font-family: Karbon;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.2px;
 }
@@ -128,7 +128,7 @@ span.availability-status.unavailable {
   font-family: Karbon;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.2px;
 }
@@ -140,7 +140,7 @@ span.availability-status.fulltext {
   font-family: Karbon;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.2px;
   text-decoration-line: underline;
@@ -180,7 +180,7 @@ span.section-title-header {
   font-family: Karbon;
   font-size: 32px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 120%;
 }
 
@@ -204,7 +204,7 @@ span.facet-counter {
   font-family: Karbon;
   font-size: 20px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.2px;
 }
@@ -235,7 +235,7 @@ div.md-chip-content {
   font-family: Karbon;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.2px;
 }
@@ -281,7 +281,7 @@ md-input-container.md-input-has-value {
   font-family: Karbon;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   line-height: 160%;
   letter-spacing: 0.2px;
   /* Override scaling from prm-advanced-search legend */
@@ -354,7 +354,7 @@ h2[translate="nui.journalsearch.category.title"] {
   font-family: Karbon;
   font-size: 32px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 120%;
 }
 
@@ -364,7 +364,7 @@ prm-tree-nav md-list-item p {
   font-family: Karbon;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.2px;
 }
