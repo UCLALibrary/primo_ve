@@ -60,8 +60,9 @@ div.top-nav-bar {
   color: var(--color-black) !important;
 }
 
-/* Top Banner: Menu item text: U/Body/Overline */
-div[data-main-menu-item] a.button-over-dark span.item-content {
+/* Top Banner: Menu item text and "more links (...)": U/Body/Overline */
+div[data-main-menu-item] a.button-over-dark span.item-content,
+button#more-links-button span.item-content {
   color: var(--color-black);
   text-align: center;
   font-family: Karbon;
