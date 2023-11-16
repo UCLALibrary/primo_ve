@@ -294,3 +294,18 @@ prm-location-items md-list-item {
   letter-spacing: 0.16px !important;
   font-weight: normal !important;
 }
+
+/* Ethical Description note: U/Body/Caption */
+ethical-description-note div {
+  font-family: proxima-nova;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.16px;
+  text-align: center;
+  border: 1.5px solid var(--color-primary-blue-02);
+  padding: 4px;
+}
+ethical-description-note div a {
+  color: var(--color-primary-blue-04);
+}
