@@ -40,10 +40,40 @@
 }
 
 @font-face {
-  font-family: Karbon;
-  src: url("karbon-web-regular.woff") format("woff");
+  font-family: "Karbon";
+  src: url("karbon-web-light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: auto;
 }
-
+@font-face {
+  font-family: "Karbon";
+  src: url("karbon-web-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Karbon";
+  src: url("karbon-web-medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Karbon";
+  src: url("karbon-web-semibold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Karbon";
+  src: url("karbon-web-bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+}
 /* Top Banner Background Color */
 .prm-primary-bg.prm-hue1,
 prm-spinner.prm-hue1.overlay-cover.light-on-dark:after,
