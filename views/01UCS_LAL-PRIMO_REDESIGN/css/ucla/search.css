@@ -334,7 +334,7 @@ prm-advanced-search .layout-xs-column {
   border-color: var(--color-secondary-grey-02);
 }
 
-/* Advanced search buttons */
+/*Advanced search buttons */
 .md-button.md-primary,
 .md-button.button-notice:focus,
 .md-button.button-notice:hover,
@@ -348,6 +348,14 @@ prm-advanced-search .layout-xs-column {
   line-height: 120%;
   text-transform: none;
   border: 1.5px solid var(--color-primary-blue-03) !important;
+}
+/*mobile breakpoint for buttons: simpler x style for Simple Search */
+@media (max-width: 599px) {
+  .switch-to-simple {
+    padding: 8px !important;
+    border: none !important;
+    font-size: 14px !important;
+  }
 }
 .md-button.md-primary:focus,
 .md-button.md-primary:hover,
@@ -390,6 +398,13 @@ md-tabs
   margin-top: 13px !important;
   max-width: 40%;
 }
+/* breakpoint for mobile */
+@media (max-width: 599px) {
+  .advanced-drop-downs.zero-margin {
+    max-width: 100%;
+  }
+}
+
 .advanced-drop-downs md-input-container md-select {
   padding-bottom: 8px !important;
 }
