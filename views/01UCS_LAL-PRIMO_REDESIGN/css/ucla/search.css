@@ -170,12 +170,13 @@ h2.sidebar-title {
   font-family: Karbon;
   font-size: 40px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 120%;
 }
 
 /* Search Results: Facet header: U/Min/Heading/Step4 */
-span.section-title-header {
+span.section-title-header,
+button.section-title {
   color: var(--color-primary-blue-05);
   font-family: Karbon;
   font-size: 32px;
@@ -192,7 +193,7 @@ div.expand-section-button {
   font-family: Karbon;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.2px;
 }
@@ -279,13 +280,20 @@ legend[translate="nui.search-advanced.searchFilters"],
 md-input-container.md-input-has-value {
   color: var(--color-black);
   font-family: Karbon;
-  font-size: 20px;
   font-style: normal;
   font-weight: 400 !important;
   line-height: 160%;
   letter-spacing: 0.2px;
   /* Override scaling from prm-advanced-search legend */
   transform: scale(1);
+}
+legend[translate="nui.search-advanced.searchFilters"],
+#advancedSearchMaterialType,
+#searchFieldsGroupAdvancedSearch,
+#advancedSearchLanguage,
+#dayStartListBox,
+#dayEndListBox {
+  font-size: 20px;
 }
 
 /* Advanced Search: Scopes, Search filters (values) : U/Body/Caption */
@@ -310,6 +318,102 @@ md-input-container.md-input-has-placeholder input[placeholder] {
   font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.16px;
+}
+
+/* Advanced search: background color */
+.advanced-search-backdrop {
+  background-color: var(--color-secondary-grey-01) !important;
+}
+prm-advanced-search .layout-xs-column {
+  background-color: var(--color-white) !important;
+}
+
+/* Advanced search box: remove drop shadow and recolor border */
+.form-focus {
+  box-shadow: initial;
+  border-color: var(--color-secondary-grey-02);
+}
+
+/*Advanced search buttons */
+.md-button.md-primary,
+.md-button.button-notice:focus,
+.md-button.button-notice:hover,
+.md-button.button-confirm.button-large,
+.switch-to-simple {
+  color: var(--color-white) !important;
+  background-color: var(--color-primary-blue-03) !important;
+  font-family: proxima-nova;
+  padding: 11px 24px !important;
+  font-size: 18px;
+  line-height: 120%;
+  text-transform: none;
+  border: 1.5px solid var(--color-primary-blue-03) !important;
+}
+/*mobile breakpoint for buttons: simpler x style for Simple Search */
+@media (max-width: 599px) {
+  .switch-to-simple {
+    padding: 8px !important;
+    border: none !important;
+    font-size: 14px !important;
+  }
+}
+.md-button.md-primary:focus,
+.md-button.md-primary:hover,
+.md-button.button-notice,
+.md-button.button-confirm:focus,
+.md-button.button-confirm:hover {
+  color: var(--color-black) !important;
+  background-color: var(--color-white) !important;
+  border: 1.5px solid var(--color-primary-blue-02) !important;
+  font-family: proxima-nova;
+  padding: 11px 24px !important;
+  font-size: 18px;
+  line-height: 120%;
+  text-transform: none;
+}
+
+/* Advanced search: radio buttons */
+md-radio-button.md-checked .md-on {
+  background-color: var(--color-default-cyan-03);
+}
+md-radio-button .md-off {
+  border-color: var(--color-default-cyan-03) !important;
+}
+
+/* Advanced search: underline "Search Criteria" in correct color */
+md-ink-bar {
+  background-color: var(--color-default-cyan-03) !important;
+}
+/* Advanced search: text color for "Search Criteria" */
+md-tabs
+  md-tabs-wrapper
+  md-tabs-canvas
+  md-pagination-wrapper
+  md-tab-item.md-active:not([disabled]) {
+  color: var(--color-black) !important;
+}
+
+/* Advanced search: align right-side filters with left */
+.advanced-drop-downs.zero-margin {
+  margin-top: 13px !important;
+  max-width: 40%;
+}
+/* breakpoint for mobile */
+@media (max-width: 599px) {
+  .advanced-drop-downs.zero-margin {
+    max-width: 100%;
+  }
+}
+
+.advanced-drop-downs md-input-container md-select {
+  padding-bottom: 8px !important;
+}
+.advanced-drop-downs .date-range-inputs {
+  margin-bottom: -12px !important;
+}
+/* Advanced search: add underlines to terms in search summary at bottom */
+.advanced-search-output .input-complex-rows.ng-not-empty {
+  border-bottom: 2px solid var(--color-default-cyan-03);
 }
 
 /* Journal Search: Label before search box: No design */
@@ -384,4 +488,18 @@ prm-browse-search-bar label[translate="nui.browse.browseby"] {
 /* This does not change the results list, which is grey / white when hovered. */
 prm-browse-search md-content {
   background-color: var(--color-white) !important;
+}
+
+/* Facets sidebar width */
+.primo-scrollbar {
+  width: 474px;
+}
+#facets {
+  max-width: 474px;
+}
+
+/* Facets sidebar: make brackets surrounding counts italic */
+.sidebar-section .text-in-brackets::before,
+.sidebar-section .text-in-brackets::after {
+  font-style: italic;
 }
