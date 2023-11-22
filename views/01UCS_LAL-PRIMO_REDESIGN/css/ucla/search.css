@@ -338,7 +338,7 @@ prm-advanced-search .layout-xs-column {
 .md-button.md-primary,
 .md-button.button-notice:focus,
 .md-button.button-notice:hover,
-.md-button.button-confirm,
+.md-button.button-confirm.button-large,
 .switch-to-simple {
   color: var(--color-white) !important;
   background-color: var(--color-primary-blue-03) !important;
