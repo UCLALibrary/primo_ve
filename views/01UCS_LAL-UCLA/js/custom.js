@@ -711,5 +711,37 @@ app.component("prmAlmaOtherMembersAfter", {
     bindings: {parentCtrl: `<`},
     template: `<ethical-description-note></ethical-description-note>`    
   });
+  /* E-Bookplate */
+  app.controller('digitalBookTitleButtonController', ['$scope', '$location', '$mdDialog', '$anchorScroll', function($scope, $location, $mdDialog, $anchorScroll){
+    let vm = this;
+    this.$onInit = function() {
+    $scope.display = vm.parentCtrl.result.pnx.display;
+    let bookplateText = $scope.display.lds36;
+  
+    //Check whether the bookplate text is present in the local field 4. Change the target field in the pnx based on where your bookplate info is located.
+    $scope.hasBookplate = function() {
+      return ($scope.display.lds36 != null && $scope.display.lds36 != '');
+    }
+  
+    //Get wording for specific bookplate display text
+    $scope.getBookplateText = function() {
+      let text = JSON.stringify($scope.display.lds36);
+      return "Purchased by " + text.slice(2,-2);
+    }
+  
+    //Set URL for the bookplate link based on the bookplate text
+    $scope.getBookplateLink = function() {
+      let text = JSON.stringify($scope.display.lds36);
+      return "https://www.library.ucla.edu/give/endowments/henry-j-bruman-educational-foundation-fund"
+    }
+  };
+  
+  }]);
+  
+  app.component('prmSearchResultAvailabilityLineAfter', {
+    bindings: { parentCtrl: '<'},
+    controller: 'digitalBookTitleButtonController',
+    template: '<div ng-if="hasBookplate()"><a href="{{getBookplateLink()}}"  class="bookplateLink" ><span><img src="https://static.library.ucla.edu/craftassetsprod/images/_fullscreen/bruman_0.jpg" width="50px" height="50px" style="background-color: #293990; margin: 2px"></span><div class="bookplateLinkText">{{getBookplateText()}}</div></a></div>'
+  });
 }());
 
