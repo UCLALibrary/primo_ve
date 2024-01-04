@@ -303,7 +303,7 @@
                            }
 
                               var elems = institutionFacets.getElementsByClassName('md-chip');
-                              console.log("Elems: ", elems);
+                              // console.log("Elems: ", elems);
                               // turn into a sortable array
                               elems = Array.prototype.slice.call(elems);
                               // Sort it.
@@ -474,18 +474,18 @@
       {
         this.navigateToHomePage = function () {
           var params = $location.search();
-          console.log(params);
+          // console.log(params);
           var vid = params.vid;
           var lang = params.lang || "en_US";
           var split = $location.absUrl().split('/discovery/');
 
           if (split.length === 1) {
-            console.log(split[0] + ' : Could not detect the view name!');
+            // console.log(split[0] + ' : Could not detect the view name!');
             return false;
           }
 
           if ($location.absUrl().match('mode=advanced')) {
-            console.log($location.absUrl().match('mode=advanced') + ' : Detected Advanced Search!');
+            // console.log($location.absUrl().match('mode=advanced') + ' : Detected Advanced Search!');
             return false;
           }
 
@@ -496,18 +496,18 @@
 
         this.showSearchLogo = function() {
           var params = $location.search();
-          console.log(params);
+          // console.log(params);
           var vid = params.vid;
           var lang = params.lang || "en_US";
           var split = $location.absUrl().split('/discovery/');
 
           if (split.length === 1) {
-            console.log(split[0] + ' : Could not detect the view name!');
+            // console.log(split[0] + ' : Could not detect the view name!');
             return false;
           }
 
           if ($location.absUrl().match('mode=advanced')) {
-            console.log($location.absUrl().match('mode=advanced') + ' : Detected Advanced Search!');
+            // console.log($location.absUrl().match('mode=advanced') + ' : Detected Advanced Search!');
             return false;
           }
 
@@ -711,37 +711,46 @@ app.component("prmAlmaOtherMembersAfter", {
     bindings: {parentCtrl: `<`},
     template: `<ethical-description-note></ethical-description-note>`    
   });
+
   /* E-Bookplate */
-  app.controller('digitalBookTitleButtonController', ['$scope', '$location', '$mdDialog', '$anchorScroll', function($scope, $location, $mdDialog, $anchorScroll){
-    let vm = this;
+  app.controller('bookplateController', ['$scope', function($scope){
+    var vm = this;
     this.$onInit = function() {
-    $scope.display = vm.parentCtrl.result.pnx.display;
-    let bookplateText = $scope.display.lds36;
-  
-    //Check whether the bookplate text is present in the local field 4. Change the target field in the pnx based on where your bookplate info is located.
-    $scope.hasBookplate = function() {
-      return ($scope.display.lds36 != null && $scope.display.lds36 != '');
-    }
-  
-    //Get wording for specific bookplate display text
-    $scope.getBookplateText = function() {
-      let text = JSON.stringify($scope.display.lds36);
-      return "Purchased by " + text.slice(2,-2);
-    }
-  
-    //Set URL for the bookplate link based on the bookplate text
-    $scope.getBookplateLink = function() {
-      let text = JSON.stringify($scope.display.lds36);
-      return "https://www.library.ucla.edu/give/endowments/henry-j-bruman-educational-foundation-fund"
-    }
-  };
-  
+      $scope.display = vm.parentCtrl.item.pnx.display;
+      // Get bookplate from Local Display Field 36 "Bookplate"
+      // This is a concatenation of the 967 $a and $b fields
+      // For example: "Thomas Gill Cary Library Fund https://www.library.ucla.edu/give/endowments/thomas-gill-cary-library-fund"
+      let bookplate = $scope.display.lds36.toString();
+    
+      //Check whether the bookplate exists
+      $scope.hasBookplate = function() {
+        return (bookplate != null && bookplate != '');
+      }   
+
+      // Get URL for bookplate link - last space-delimited "word" in the string
+      $scope.getBookplateLink = function() {
+        return bookplate.split(" ").slice(-1)[0];
+      }
+    
+      //Get wording for specific bookplate display text - all but the last "word"
+      $scope.getBookplateText = function() {
+        return bookplate.split(" ").slice(0,-1).join(" ");
+      }
+    };
   }]);
   
-  app.component('prmSearchResultAvailabilityLineAfter', {
+  // JournalIndicationLine component appears on both brief (search result) and full display, regardless of media type
+  app.component('prmSearchResultJournalIndicationLineAfter', {
     bindings: { parentCtrl: '<'},
-    controller: 'digitalBookTitleButtonController',
-    template: '<div ng-if="hasBookplate()"><a href="{{getBookplateLink()}}"  class="bookplateLink" ><span><img src="https://static.library.ucla.edu/craftassetsprod/images/_fullscreen/bruman_0.jpg" width="50px" height="50px" style="background-color: #293990; margin: 2px"></span><div class="bookplateLinkText">{{getBookplateText()}}</div></a></div>'
+    template: '<bookplate-component parent-ctrl="$ctrl.parentCtrl"></bookplate-component>'
   });
+
+  app.component('bookplateComponent', {
+    bindings: { parentCtrl: '<'},
+    controller: 'bookplateController',
+    // SVG is hosted on github to make this code more readable
+    template: '<div class="bookplate" ng-if="hasBookplate()"><a href="{{getBookplateLink()}}" class="bookplateLink"><span><svg width="50" height="50" viewBox="0 0 81 80" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><image xlink:href="https://raw.githubusercontent.com/UCLALibrary/design-tokens/main/assets/svgs/molecule-book.svg"/></svg></span><div class="bookplateLinkText">{{getBookplateText()}}</div></a></div>'
+  });
+
 }());
 
