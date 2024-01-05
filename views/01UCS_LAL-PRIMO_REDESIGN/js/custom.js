@@ -729,7 +729,63 @@ app.component("prmAlmaOtherMembersAfter", {
     Try applying the filters, 
     using an <a href="http://localhost:8003/discovery/search?vid=01UCS_LAL:PRIMO_REDESIGN&lang=en&mode=advanced">advanced search</a>, 
     or changing your <a href="https://guides.library.ucla.edu/Search/Scopes">search scope.</a></span>
-</div></div></div>
+  </div></div></div>
+  <footer>
+      <div class="main-footer">
+          <div class="nav-container">
+              <div class="link-list">
+                  <h3>Search</h3>
+                  <ul>
+                      <li><a href="https://www.library.ucla.edu/">New Search</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Advanced Search</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Course Reserves</a></li>
+                      <li><a href="https://www.library.ucla.edu/">About Search Scopes</a></li>
+                  </ul>
+              </div>
+              <div class="link-list">
+                  <h3>Account</h3>
+                  <ul>
+                      <li><a href="https://www.library.ucla.edu/">My Library Account</a></li>
+                      <li><a href="https://www.library.ucla.edu/">My Loans</a></li>
+                      <li><a href="https://www.library.ucla.edu/">My Requests</a></li>
+                      <li><a href="https://www.library.ucla.edu/">My Favorites</a></li>
+                  </ul>
+              </div>
+              <div class="link-list">
+                  <h3>Help</h3>
+                  <ul>
+                      <li><a href="https://www.library.ucla.edu/">Ask a Librarian</a></li> 
+                      <li><a href="https://www.library.ucla.edu/">Guide to UC Library Search</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Guide to Logging In</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Research Guides</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Help with VPN</a></li>
+                  </ul>
+              </div>
+              <div class="link-list">
+                  <h3>More Resources</h3>
+                  <ul>
+                      <li><a href="https://www.library.ucla.edu/">VPN Client</a></li>
+                      <li><a href="https://www.library.ucla.edu/">ILL Request</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Research Guides</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Databases</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Primary Sources</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="sock">
+          <div class="nav-container">
+              <div class="sock-content">
+                  <span>© 2021 Regents of the University of California</span>
+              </div>
+              <ul class="sock-list">
+                  <li><a href="https://www.library.ucla.edu/">Emergency</a></li>
+                  <li><a href="https://www.library.ucla.edu/">Accessibility</a></li>
+                  <li><a href="https://www.library.ucla.edu/">Privacy & Terms of Use</a></li>
+              </ul>
+          </div>
+      </div>
+  </footer>
 `
   });
 
@@ -738,4 +794,5 @@ app.component("prmAlmaOtherMembersAfter", {
     template: `<search-bottom-banner></search-bottom-banner>`    
   });
 }());
+
 
