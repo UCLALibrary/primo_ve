@@ -717,9 +717,9 @@ app.component("prmAlmaOtherMembersAfter", {
 
     <svg width="225" height="496" viewBox="0 0 225 496" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg__molecule-half">
   <g>
-  <path d="M244.852 445.001L106.511 387.698L71.9262 422.283L244.852 493.911L244.852 445.001Z" fill="#0B6AB7" class="svg__fill-bottom"/>
-  <path d="M71.9261 76.4322L106.511 111.017L244.852 53.7149L244.851 4.80416L71.9261 76.4322Z" fill="#0B6AB7" class="svg__fill-top"/>
-  <path d="M0.297249 249.357L71.9254 76.4319L106.511 111.017L49.2081 249.357L49.208 249.357L106.51 387.698L71.9254 422.283L0.297249 249.357Z" fill="#9ECFFA" class="svg__fill-accent"/>
+  <path d="M244.852 445.001L106.511 387.698L71.9262 422.283L244.852 493.911L244.852 445.001Z" class="svg__fill-bottom"/>
+  <path d="M71.9261 76.4322L106.511 111.017L244.852 53.7149L244.851 4.80416L71.9261 76.4322Z" class="svg__fill-top"/>
+  <path d="M0.297249 249.357L71.9254 76.4319L106.511 111.017L49.2081 249.357L49.208 249.357L106.51 387.698L71.9254 422.283L0.297249 249.357Z" class="svg__fill-accent"/>
   </g>
   </svg>
   <div class="bottom-banner-content">
