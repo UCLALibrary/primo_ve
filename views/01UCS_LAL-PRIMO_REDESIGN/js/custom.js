@@ -303,7 +303,7 @@
                            }
 
                               var elems = institutionFacets.getElementsByClassName('md-chip');
-                              console.log("Elems: ", elems);
+                              //console.log("Elems: ", elems);
                               // turn into a sortable array
                               elems = Array.prototype.slice.call(elems);
                               // Sort it.
@@ -474,18 +474,18 @@
       {
         this.navigateToHomePage = function () {
           var params = $location.search();
-          console.log(params);
+          //console.log(params);
           var vid = params.vid;
           var lang = params.lang || "en_US";
           var split = $location.absUrl().split('/discovery/');
 
           if (split.length === 1) {
-            console.log(split[0] + ' : Could not detect the view name!');
+            //console.log(split[0] + ' : Could not detect the view name!');
             return false;
           }
 
           if ($location.absUrl().match('mode=advanced')) {
-            console.log($location.absUrl().match('mode=advanced') + ' : Detected Advanced Search!');
+            //console.log($location.absUrl().match('mode=advanced') + ' : Detected Advanced Search!');
             return false;
           }
 
@@ -496,18 +496,18 @@
 
         this.showSearchLogo = function() {
           var params = $location.search();
-          console.log(params);
+          //console.log(params);
           var vid = params.vid;
           var lang = params.lang || "en_US";
           var split = $location.absUrl().split('/discovery/');
 
           if (split.length === 1) {
-            console.log(split[0] + ' : Could not detect the view name!');
+            //console.log(split[0] + ' : Could not detect the view name!');
             return false;
           }
 
           if ($location.absUrl().match('mode=advanced')) {
-            console.log($location.absUrl().match('mode=advanced') + ' : Detected Advanced Search!');
+            //console.log($location.absUrl().match('mode=advanced') + ' : Detected Advanced Search!');
             return false;
           }
 
@@ -709,5 +709,90 @@ app.component("prmAlmaOtherMembersAfter", {
     bindings: {parentCtrl: `<`},
     template: `<ethical-description-note></ethical-description-note>`    
   });
+
+  /* "Can't find what you're looking for?" Banner - bottom of search results */
+  app.component('searchBottomBanner', {
+    template: `
+    <div id="search-bottom-banner">
+
+    <svg width="225" height="496" viewBox="0 0 225 496" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg__molecule-half">
+  <g>
+  <path d="M244.852 445.001L106.511 387.698L71.9262 422.283L244.852 493.911L244.852 445.001Z" class="svg__fill-bottom"/>
+  <path d="M71.9261 76.4322L106.511 111.017L244.852 53.7149L244.851 4.80416L71.9261 76.4322Z" class="svg__fill-top"/>
+  <path d="M0.297249 249.357L71.9254 76.4319L106.511 111.017L49.2081 249.357L49.208 249.357L106.51 387.698L71.9254 422.283L0.297249 249.357Z" class="svg__fill-accent"/>
+  </g>
+  </svg>
+  <div class="bottom-banner-content">
+    <span id="bottom-banner-header">
+    Can’t find what you’re looking for?</span>
+    <span id="bottom-banner-text">
+    Try applying the filters, 
+    using an <a href="http://localhost:8003/discovery/search?vid=01UCS_LAL:PRIMO_REDESIGN&lang=en&mode=advanced">advanced search</a>, 
+    or changing your <a href="https://guides.library.ucla.edu/Search/Scopes">search scope.</a></span>
+  </div></div></div>
+  <footer>
+      <div class="main-footer">
+          <div class="nav-container">
+              <div class="link-list">
+                  <h3>Search</h3>
+                  <ul>
+                      <li><a href="https://www.library.ucla.edu/">New Search</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Advanced Search</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Course Reserves</a></li>
+                      <li><a href="https://www.library.ucla.edu/">About Search Scopes</a></li>
+                  </ul>
+              </div>
+              <div class="link-list">
+                  <h3>Account</h3>
+                  <ul>
+                      <li><a href="https://www.library.ucla.edu/">My Library Account</a></li>
+                      <li><a href="https://www.library.ucla.edu/">My Loans</a></li>
+                      <li><a href="https://www.library.ucla.edu/">My Requests</a></li>
+                      <li><a href="https://www.library.ucla.edu/">My Favorites</a></li>
+                  </ul>
+              </div>
+              <div class="link-list">
+                  <h3>Help</h3>
+                  <ul>
+                      <li><a href="https://www.library.ucla.edu/">Ask a Librarian</a></li> 
+                      <li><a href="https://www.library.ucla.edu/">Guide to UC Library Search</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Guide to Logging In</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Research Guides</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Help with VPN</a></li>
+                  </ul>
+              </div>
+              <div class="link-list">
+                  <h3>More Resources</h3>
+                  <ul>
+                      <li><a href="https://www.library.ucla.edu/">VPN Client</a></li>
+                      <li><a href="https://www.library.ucla.edu/">ILL Request</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Research Guides</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Databases</a></li>
+                      <li><a href="https://www.library.ucla.edu/">Primary Sources</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="sock">
+          <div class="nav-container">
+              <div class="sock-content">
+                  <span>© 2021 Regents of the University of California</span>
+              </div>
+              <ul class="sock-list">
+                  <li><a href="https://www.library.ucla.edu/">Emergency</a></li>
+                  <li><a href="https://www.library.ucla.edu/">Accessibility</a></li>
+                  <li><a href="https://www.library.ucla.edu/">Privacy & Terms of Use</a></li>
+              </ul>
+          </div>
+      </div>
+  </footer>
+`
+  });
+
+  app.component('prmPageNavMenuAfter', {
+    bindings: {parentCtrl: `<`},
+    template: `<search-bottom-banner></search-bottom-banner>`    
+  });
 }());
+
 
