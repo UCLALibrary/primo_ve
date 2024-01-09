@@ -748,8 +748,7 @@ app.component("prmAlmaOtherMembersAfter", {
   app.component('bookplateComponent', {
     bindings: { parentCtrl: '<'},
     controller: 'bookplateController',
-    // SVG is hosted on github to make this code more readable
-    template: '<div class="bookplate" ng-if="hasBookplate()"><a href="{{getBookplateLink()}}" class="bookplateLink"><span><svg width="50" height="50" viewBox="0 0 81 80" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><image xlink:href="https://raw.githubusercontent.com/UCLALibrary/design-tokens/main/assets/svgs/molecule-book.svg"/></svg></span><div class="bookplateLinkText">{{getBookplateText()}}</div></a></div>'
+    template: '<div class="bookplate" ng-if="hasBookplate()">Provided by: <a href="{{getBookplateLink()}}" class="bookplateLink">{{getBookplateText()}}</a></div>'
   });
 
 }());
