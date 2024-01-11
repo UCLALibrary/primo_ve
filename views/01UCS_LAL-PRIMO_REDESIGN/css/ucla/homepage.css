@@ -124,7 +124,7 @@ prm-static.md-padding.flex {
   }
   padding: 100px 40px;
 }
-.small-box-text.horizontal h2 {
+.small-box-text.horizontal h2 a {
   color: var(--color-primary-blue-03);
   font-family: Karbon;
   font-size: 26px;
