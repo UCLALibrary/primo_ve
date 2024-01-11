@@ -96,10 +96,7 @@ div.full-view-section {
 }
 
 .full-view-section {
-  padding-left: 100px;
-  @media (max-width: 768px) {
-    padding-left: initial;
-  }
+  padding-left: 4em;
 }
 
 /* redesign colors and fonts */
