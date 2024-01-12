@@ -13,14 +13,12 @@ prm-static.md-padding.flex {
 }
 /* Hide side "spacer" divs in desktop view */
 @media (min-width: 1280px) {
-  .flex-lg-25,
-  .layout-row > .flex-lg-25 {
+  md-content .flex-lg-25 {
     display: none;
   }
 }
 @media (min-width: 1280px) {
-  .flex-lg-10,
-  .layout-row > .flex-lg-10 {
+  md-content .flex-lg-10 {
     display: none;
   }
 }
