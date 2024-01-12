@@ -1,7 +1,6 @@
 /* Styling for default Primo components */
 
-md-content,
-md-content.md-primoExplore-theme {
+md-content.md-primoExplore-theme.layout-align-center-start {
   background-color: var(--color-white);
   justify-content: center;
 }
