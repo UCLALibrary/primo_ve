@@ -125,6 +125,11 @@ prm-fines div.header-subtitle > span > em:first-child {
   text-transform: uppercase;
 }
 
+/* Account -> Fines + Fees: Align balance and link to payment button. */
+prm-fines div.header-subtitle {
+  display: flex;
+}
+
 /* Account > Fines + Fees: item amount : U/Max/Heading/Step1  */
 prm-fines
   md-list
@@ -142,6 +147,7 @@ prm-fines
 }
 
 /* Account > Fines + Fees: labels: U/Body/Overline */
+/* Bump font-size from 16px to 18px per discussions. */
 prm-fines
   md-list
   md-list-item
@@ -151,7 +157,7 @@ prm-fines
   > span:first-child {
   color: var(--color-black);
   font-family: Karbon;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 160%;
@@ -174,4 +180,24 @@ prm-fines
   font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.2px;
+}
+
+/* Account > Fines + Fees: Allow long titles to wrap */
+prm-fines md-list md-list-item h4 {
+  white-space: unset !important;
+}
+
+/* Account > Fines + Fees: Enforce 2-column display of data for all cards */
+div.flex-xs-100.flex {
+  min-width: unset;
+}
+
+/* Account -> Fines + Fees: U/Body/Button for link to payment page */
+.tab-content-header .md-button.button-as-link {
+  color: var(--color-black);
+  font-family: proxima-nova;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
 }
