@@ -195,7 +195,7 @@ div.flex-xs-100.flex {
 /* Account -> Fines + Fees: U/Body/Button for link to payment page */
 .tab-content-header .md-button.button-as-link {
   color: var(--color-black);
-  font-family: Proxima Nova;
+  font-family: proxima-nova;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
