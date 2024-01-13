@@ -13,7 +13,7 @@ prm-static.md-padding.flex {
 }
 /* Hide side "spacer" divs in desktop view */
 @media (min-width: 1280px) {
-  prm-search md-content .flex-lg-25 {
+  prm-search md-content .flex-lg-25:not(#dBcategorize) {
     display: none;
   }
 }
