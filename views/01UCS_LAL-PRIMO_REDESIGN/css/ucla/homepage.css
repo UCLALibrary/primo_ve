@@ -4,7 +4,7 @@ md-content.md-primoExplore-theme.layout-align-center-start {
   background-color: var(--color-white);
   justify-content: center;
 }
-main {
+prm-static main {
   max-width: 1040px;
   margin: 64px auto;
 }
@@ -13,12 +13,12 @@ prm-static.md-padding.flex {
 }
 /* Hide side "spacer" divs in desktop view */
 @media (min-width: 1280px) {
-  prm-search md-content .flex-lg-25:not(#dBcategorize) {
+  prm-search md-content .flex-lg-25:not(#dBcategorize):not(#facets) {
     display: none;
   }
 }
 @media (min-width: 1280px) {
-  prm-search md-content .flex-lg-10 {
+  prm-search md-content .flex-lg-10:not(#dBcategorize):not(#facets) {
     display: none;
   }
 }
