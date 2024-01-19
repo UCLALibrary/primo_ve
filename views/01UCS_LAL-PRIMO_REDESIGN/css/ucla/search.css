@@ -79,6 +79,12 @@ prm-brief-result h3.item-title {
   line-height: 120%; /* 31.2px */
 }
 
+
+/* Search Results: Highlighted search term(s) */
+prm-brief-result prm-highlight mark {
+  box-shadow: inset 0 -.3em 0 0 var(--color-primary-yellow-01);
+}
+
 /* Search Results: Non-Title bib info: U/Body/Caption */
 span [data-field-selector] {
   color: var(--color-black);
@@ -106,6 +112,19 @@ prm-search-result-availability-line span.best-location-delivery {
   line-height: 160%;
   letter-spacing: 0.2px;
   text-decoration-line: underline;
+}
+
+/* Search Results: Content type (e.g. Journal, Book): U/Body/Caption,
+with additional background box */
+prm-brief-result-container .media-content-type span {
+  font-family: proxima-nova;
+  font-size: 16px;
+  text-transform: none;
+  font-weight: 400;
+  color: var(--color-secondary-grey-05);
+  border-radius: 5px;
+  background: var(--color-primary-blue-01);
+  padding: 4px 43px;
 }
 
 /* Search Results: Status available in library: U/Body/Paragraph */
@@ -163,6 +182,7 @@ prm-snippet {
   letter-spacing: 0.16px;
 }
 
+
 /* Search Results: Facet Refine Your Search: U/Min/Heading/Step6 */
 h2.sidebar-title {
   /* Can't do this in white yet, unless background here is blue */
@@ -172,6 +192,14 @@ h2.sidebar-title {
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+}
+
+/* Search Results: Facet Refine -> Search in Full Text */
+/* This changes text only; cannot figure out how to correctly change
+slider, box, and hover */
+prm-facet .switch-results span {
+  background-color: var(--color-white) !important;
+  color: var(--color-black) !important;
 }
 
 /* Search Results: Facet header: U/Min/Heading/Step4 */
@@ -185,6 +213,12 @@ button.section-title {
   line-height: 120%;
 }
 
+/* Search Results: Facet header: Turn off hover color change
+by setting color same as normal */
+prm-facet-exact .section-title:hover span {
+  color: var(--color-primary-blue-05) !important;
+}
+
 /* Search Results: Facet title, and Show More: U/Body/Paragraph */
 span.text-number-space,
 div.expand-section-button {
@@ -196,6 +230,26 @@ div.expand-section-button {
   font-weight: 400;
   line-height: 160%;
   letter-spacing: 0.2px;
+}
+
+/* Search Results: Facet title hover: Turn off hover color change */
+.md-chip .facet-title:hover:not([disabled]) {
+  background-color: unset !important;
+}
+
+/* Search Results: Facet "include" checkbox alignment with text */
+.multiselect-facet-group .md-chip .md-chip-content md-checkbox {
+  bottom: 8px;
+}
+
+/* Search Results: Facet "exclude" checkbox alignment with text */
+.section-content .md-chips .md-chip.wrapping-chip .md-chip-remove-container {
+  bottom: -8px;
+}
+
+/* Search Results: Facet "exclude" checkbox color when hovered */
+.available-facets .section-content .md-chips .md-chip .button-exclude:hover:not([disabled]) {
+  color: var(--status-error-02);
 }
 
 /* Search Results: Facet count */
