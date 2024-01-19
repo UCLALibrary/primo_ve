@@ -121,7 +121,7 @@ prm-brief-result-container .media-content-type span {
   font-size: 16px;
   text-transform: none;
   font-weight: 400;
-  color: var(--secondary-grey-05);
+  color: var(--color-secondary-grey-05);
   border-radius: 5px;
   background: var(--color-primary-blue-01);
   padding: 4px 43px;
