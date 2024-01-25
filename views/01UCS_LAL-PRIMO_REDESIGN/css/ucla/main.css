@@ -380,3 +380,79 @@ md-autocomplete-parent-scope {
   padding: 32px 0;
   align-items: center;
 }
+
+/* Navigation menu (ellipsis menu) */
+
+/* Fonts and Colors */
+prm-main-menu[menu-type="full"] .layout-full-height {
+  background-color: var(--color-primary-blue-04)
+}
+prm-main-menu[menu-type="full"] .layout-full-height .md-headline {
+  color: var(--color-white);
+  font-family: Karbon;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 2px; 
+}
+prm-main-menu[menu-type="full"] .layout-full-height .md-subhead {
+  color: var(--color-white);
+  font-family: Karbon;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: .2px; 
+}
+prm-main-menu[menu-type="full"] #mainMenuFullCloseButton,
+prm-main-menu[menu-type="full"] .close-button md-icon {
+  background-color: var(--color-white);
+  color: var(--color-primary-blue-03);
+  height: 32px;
+  width: 32px;
+  min-height: 32px;
+  min-width: 32px;
+}
+/* Realign close button svg */
+prm-main-menu[menu-type="full"] #mainMenuFullCloseButton md-icon {
+  margin: -8px;
+}
+/* Add cyan underline to top menu items, and set typography (U/Body/Link) */
+prm-main-menu[menu-type="full"] button:not(#mainMenuFullCloseButton),
+prm-main-menu[menu-type="full"] #moreViewLanguageItem {
+  border-bottom: 2px solid var(--color-default-cyan-03); 
+  font-family: proxima-nova;
+  font-size: 20px !important;
+  font-style: normal;
+  font-weight: 200 !important;
+  line-height: 120% !important; 
+}
+/* Realign language selector */
+prm-main-menu[menu-type="full"] #moreViewLanguageItem {
+  padding-bottom: 0;
+}
+/* Hover states for large buttons in main menu */
+prm-main-menu[menu-type="full"] .layout-full-height a:hover,  
+prm-main-menu[menu-type="full"] .layout-full-height a:hover span {
+  background-color: var(--color-primary-blue-03) !important;
+  color: var(--color-white) !important;
+}
+/* Hover states for top bar buttons in main menu */
+prm-main-menu[menu-type="full"] button:not(#mainMenuFullCloseButton):hover,
+prm-main-menu[menu-type="full"] #moreViewLanguageItem:hover,
+prm-main-menu prm-change-lang md-select-value:hover {
+  background-color: var(--color-primary-blue-04) !important;
+  color: var(--color-primary-yellow-01) !important;
+}
+/* undo ALL CAPS on Library Card and Language selection buttons */
+prm-main-menu[menu-type="full"] prm-library-card-menu button,
+prm-main-menu prm-change-lang md-select-value {
+  text-transform: none;
+  color: var(--color-white) !important;
+}
+/* Hide icons on top items in main menu, plus language selector label */
+prm-main-menu #moreViewLanguageItem prm-icon,
+prm-main-menu prm-library-card-menu prm-icon,
+prm-main-menu prm-authentication prm-icon,
+prm-main-menu .display-language-label {
+  display: none !important;
+}
