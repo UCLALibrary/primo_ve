@@ -155,6 +155,10 @@ div.search-actions button.md-button.button-confirm prm-icon {
   box-shadow: none;
   text-decoration: underline;
 }
+/* prevent bookplate from being hidden on hover in search results */
+prm-search-result-journal-indication-line {
+  z-index: 1;
+}
 
 div.full-view-section {
   margin-top: 0 !important;
