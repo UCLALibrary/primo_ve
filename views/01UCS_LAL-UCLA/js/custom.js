@@ -729,11 +729,11 @@ app.component("prmAlmaOtherMembersAfter", {
 
       //Check whether the bookplate exists
       $scope.hasBookplate = function() {
-        // first check if the field exists
-        if (bookplates != null && bookplates != ''){
+        if (bookplates != null && bookplates != '') {
           return true;
         }
-        return false; }   
+        return false; 
+      }   
 
       // Get URLs for bookplate links - last space-delimited "word" in each string
       $scope.getBookplateLink = function(bookplate) {
@@ -756,7 +756,8 @@ app.component("prmAlmaOtherMembersAfter", {
   app.component('bookplateComponent', {
     bindings: { parentCtrl: '<'},
     controller: 'bookplateController',
-    template: '<div class="bookplate" ng-if="hasBookplate()" ng-repeat="bookplate in bookplates"> Provided by: <a href="{{getBookplateLink(bookplate)}}" class="bookplateLink">{{getBookplateText(bookplate)}}</a></div>'
+    template: `<div class="bookplate" ng-if="hasBookplate()" ng-repeat="bookplate in bookplates">
+    Provided by: <a href="{{getBookplateLink(bookplate)}}" class="bookplateLink">{{getBookplateText(bookplate)}}</a></div>`
   });
 
 }());
