@@ -742,7 +742,7 @@ app.component("prmAlmaOtherMembersAfter", {
   // JournalIndicationLine component appears on both brief (search result) and full display, regardless of media type
   app.component('prmSearchResultJournalIndicationLineAfter', {
     bindings: { parentCtrl: '<'},
-    template: '<bookplate-component parent-ctrl="$ctrl.parentCtrl"></bookplate-component>'
+    template: '<bookplate-component ng-click="$event.stopPropagation();" parent-ctrl="$ctrl.parentCtrl"></bookplate-component>'
   });
 
   app.component('bookplateComponent', {
