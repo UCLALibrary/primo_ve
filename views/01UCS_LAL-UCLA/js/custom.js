@@ -496,7 +496,7 @@
 
         this.showSearchLogo = function() {
           var params = $location.search();
-          console.log(params);
+          //console.log(params);
           var vid = params.vid;
           var lang = params.lang || "en_US";
           var split = $location.absUrl().split('/discovery/');
@@ -727,14 +727,6 @@ app.component("prmAlmaOtherMembersAfter", {
       let bookplates = $scope.display.lds36;
       $scope.bookplates = bookplates;
 
-      //Check whether the bookplate exists
-      $scope.hasBookplate = function() {
-        if (bookplates != null && bookplates != '') {
-          return true;
-        }
-        return false; 
-      }   
-
       // Get URLs for bookplate links - last space-delimited "word" in each string
       $scope.getBookplateLink = function(bookplate) {
         return bookplate.split(" ").slice(-1)[0];
@@ -756,8 +748,8 @@ app.component("prmAlmaOtherMembersAfter", {
   app.component('bookplateComponent', {
     bindings: { parentCtrl: '<'},
     controller: 'bookplateController',
-    template: `<div class="bookplate" ng-if="hasBookplate()" ng-repeat="bookplate in bookplates">
-    Provided by: <a href="{{getBookplateLink(bookplate)}}" class="bookplateLink">{{getBookplateText(bookplate)}}</a></div>`
+    template: `<div class="bookplate" ng-repeat="bookplate in bookplates">
+    Provided by: <a target="_blank" href="{{getBookplateLink(bookplate)}}" class="bookplateLink">{{getBookplateText(bookplate)}}</a></div>`
   });
 
 }());
