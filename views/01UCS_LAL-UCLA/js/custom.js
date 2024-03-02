@@ -496,7 +496,7 @@
 
         this.showSearchLogo = function() {
           var params = $location.search();
-          console.log(params);
+          //console.log(params);
           var vid = params.vid;
           var lang = params.lang || "en_US";
           var split = $location.absUrl().split('/discovery/');
@@ -711,5 +711,46 @@ app.component("prmAlmaOtherMembersAfter", {
     bindings: {parentCtrl: `<`},
     template: `<ethical-description-note></ethical-description-note>`    
   });
+
+
+  /* E-Bookplates */
+  app.controller('bookplateController', ['$scope', function($scope){
+    var vm = this;
+    this.$onInit = function() {
+      $scope.display = vm.parentCtrl.item.pnx.display;
+      // Get bookplate from Local Display Field 36 "Bookplate"
+      // This is an array, each element is a bookplate
+      // Each bookplate is a concatenation of the 966 $b and $c fields
+      // For example: 
+      // lds36: Array [ "Bookplate Label #1 https://example.com", "Bookplate Label #2 https://another-example.com" ]
+      // With our normalization rules, only bookplates with URLs will be in the array
+      let bookplates = $scope.display.lds36;
+      $scope.bookplates = bookplates;
+
+      // Get URLs for bookplate links - last space-delimited "word" in each string
+      $scope.getBookplateLink = function(bookplate) {
+        return bookplate.split(" ").slice(-1)[0];
+      }
+    
+      // Get wording for specific bookplate display text - all but the last "word"
+      $scope.getBookplateText = function(bookplate) {
+        return bookplate.split(" ").slice(0,-1).join(" ");
+      }
+    };
+  }]);
+  
+  // JournalIndicationLine component appears on both brief (search result) and full display, regardless of media type
+  app.component('prmSearchResultJournalIndicationLineAfter', {
+    bindings: { parentCtrl: '<'},
+    template: '<bookplate-component ng-click="$event.stopPropagation();" parent-ctrl="$ctrl.parentCtrl"></bookplate-component>'
+  });
+
+  app.component('bookplateComponent', {
+    bindings: { parentCtrl: '<'},
+    controller: 'bookplateController',
+    template: `<div class="bookplate" ng-repeat="bookplate in bookplates">
+    Provided by: <a target="_blank" href="{{getBookplateLink(bookplate)}}" class="bookplateLink">{{getBookplateText(bookplate)}}</a></div>`
+  });
+
 }());
 

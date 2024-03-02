@@ -147,27 +147,19 @@ div.search-actions button.md-button.button-confirm prm-icon {
 
 /*bookplate*/
 .bookplate {
-  background-color: var(--color-primary-blue-04);
-  text-align: center;
-  color: var(--color-white);
-  width: 200px;
-  height: 300px;
-  font-family: Didot, serif;
-  border: 3px double white;
-}
-button.bookplateBtn {
-  border: 1px solid var(--color-primary-blue-04);
-}
-.bookplateLink {
   display: table;
-  padding: 5px;
-  border: 2px solid var(--color-secondary-yellow-600);
+  margin: auto 0;
 }
-.bookplateLinkText {
-  display: table-cell;
-  vertical-align: middle;
-  font-weight: bold;
+
+.bookplateLink:hover {
+  box-shadow: none;
+  text-decoration: underline;
 }
+/* prevent bookplate from being hidden on hover in search results */
+prm-search-result-journal-indication-line {
+  z-index: 1;
+}
+
 div.full-view-section {
   margin-top: 0 !important;
 }
