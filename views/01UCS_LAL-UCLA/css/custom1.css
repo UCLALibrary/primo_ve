@@ -625,3 +625,10 @@ md-input-container .md-input,
 #speedDialWidget.page-nav {
   bottom: 80px !important;
 }
+
+/* Make SRLF "Request" link more visible */
+prm-service-button span[translate="AlmaRequest"] {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.3em;
+}
