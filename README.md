@@ -14,6 +14,9 @@ Developers at other Primo VE sites are welcome to use this as a starting point. 
 git clone git@github.com:UCLALibrary/primo_ve.git
 ```
 
+3. Set proxy and view variables.
+Edit `vars.env` as needed. Needed if working with a non-default view, and required for non-UCLA developers.  See Troubleshooting section below for more information.
+
 ## Run
 From the `primo_ve` directory:
 ```
