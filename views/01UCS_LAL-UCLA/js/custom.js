@@ -102,9 +102,9 @@
     var formatLink = function formatLink(link) {
       if ( link.match(/_PD$/i) ){
         link = link.substring(0, link.length - 3);
-        self.fullTextLinkMsg = 'Available online with HathiTrust - Public Domain Access';
+        self.fullTextLinkMsg = 'Available online with HathiTrust';
       } else {
-        self.fullTextLinkMsg = 'Error - ' + link;
+        self.fullTextLinkMsg = 'Available online with HathiTrust';
       }
       return link;
     };
@@ -575,7 +575,7 @@
   app.component('prmSearchResultAvailabilityLineAfter', {
     bindings: { parentCtrl: '<'},
     controller: 'digitalBookTitleButtonController',
-    template: '<hathi-trust-availability entity-id="urn:mace:incommon:ucla.edu" msg="Available online with HathiTrust - UCLA Access"></hathi-trust-availability>'
+    template: '<hathi-trust-availability entity-id="urn:mace:incommon:ucla.edu" msg="Available online with HathiTrust - UCLA Access" ignore-copyright="true"></hathi-trust-availability>'
   });
 
   /* UC Library Search Logo */
