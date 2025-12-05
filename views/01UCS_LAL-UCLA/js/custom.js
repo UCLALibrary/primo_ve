@@ -696,20 +696,27 @@ app.component("prmAlmaOtherMembersAfter", {
     template: `<request-hint-component></request-hint-component>`    
   });
 
-  /* Ethical Description Note */
-  app.component('ethicalDescriptionNote', {
+  /* Ethical Description Note and 19th-century materials warning*/
+  app.component('recordEndNote', {
     template: `<div layout="row" class="alert-bar layout-align-center-center layout-row" layout-align="center center" 
     style="border: 2px solid var(--color-primary-blue-04); border-radius: 3px; text-align:left; padding:4px;">
       <span class="bar-text">We are committed to updating our catalog records and finding aids whenever feasible 
       to revise problematic descriptions and subjects, including the addition of relevant context.
       <b>To report an issue, including harmful language, please use 
       <a href="https://ucla.libwizard.com/id/38f45c482a5fcb0b715a7e9e3ddee8b2" target="_blank" rel="noopener noreferrer">this form</a>.</b> 
+      </span></div>
+      <br/>
+      <div layout="row" class="alert-bar layout-align-center-center layout-row" layout-align="center center" 
+    style="border: 2px solid var(--color-primary-blue-04); border-radius: 3px; text-align:left; padding:4px;">
+      <span class="bar-text"> For your safety, be aware that 19th-century book covers may contain traces of heavy metals. 
+      For more information see 
+      <a href="https://library.ucla.edu" target="_blank" rel="noopener noreferrer">Handling Books That May Contain Heavy Metals</a>.</b> 
       </span></div>`
   });
 
   app.component('prmServiceDetailsAfter', {
     bindings: {parentCtrl: `<`},
-    template: `<ethical-description-note></ethical-description-note>`    
+    template: `<record-end-note></record-end-note>`    
   });
 
 
