@@ -752,20 +752,6 @@ app.component("prmAlmaOtherMembersAfter", {
     Provided by: <a target="_blank" href="{{getBookplateLink(bookplate)}}" class="bookplateLink">{{getBookplateText(bookplate)}}</a></div>`
   });
 
-  // Library Cost Analysis script
-  app.controller("costAnalysisController", [
-    "$scope",
-    function () {
-      var s = document.createElement("script");
-      s.type = "text/javascript";
-      s.src = "https://librarystudy.library.ucla.edu/gsurvey.js";
-      document.head.appendChild(s);
-    },
-  ]);
-  app.component("prmTopBarBefore", {
-    bindings: { parentCtrl: "<" },
-    controller: "costAnalysisController",
-  });
 
 }());
 
